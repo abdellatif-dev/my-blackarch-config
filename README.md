@@ -1,0 +1,2 @@
+# my black arch config
+
