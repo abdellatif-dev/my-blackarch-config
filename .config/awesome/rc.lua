@@ -67,30 +67,25 @@ editor_cmd = terminal .. " -e " .. editor
 -- Create a laucher widget and a main menu
 myawesomemenu = {
   { "manual", terminal .. " -e man awesome" },
-  { "edit config", editor_cmd .. " " .. awesome.conffile },
+  { "edit config", editor_cmd .. "terminator -e 'vim ~/.config/awesome/'" .. awesome.conffile },
   { "restart", awesome.restart },
   { "quit", awesome.quit }
 }
 
 termmenu = {
   { "terminator", "terminator" },
-  { "term (grey)", "urxvt -bg black -fg grey" },
-  { "term (red)", "urxvt -bg black -fg red" },
-  { "term (blue)", "urxvt -bg black -fg blue" },
-  { "term (green)", "urxvt -bg black -fg green" },
-  { "term (yellow)", "urxvt -bg black -fg yellow" },
-  { "term (white)", "urxvt -bg black -fg white" }
-
 }
 
 browsermenu = {
   { "firefox", "firefox" },
-  { "chromium", "chromium" }
+  { "chromium", "chromium" },
+  { "torbrowser", "torbrowser-launcher" }
 }
 
 networkmenu = {
   { "wifi-radar", "wifi-radar" },
-  { "wifi-radar-polkit", "wifi-radar-polkit" }
+  { "wifi-radar-polkit", "wifi-radar-polkit" },
+  { "iwctl", "terminator -e 'iwctl'" }
 }
 
 antiforensicmenu = {
@@ -1901,8 +1896,6 @@ defensivemenu = {
 { "suricatactl", "terminator -e  'suricatactl ; zsh'" },
 { "suricatasc", "terminator -e  'suricatasc ; zsh'" },
 { "tabi", "terminator -e  'tabi -h ; zsh'" },
-{ "tor-autocircuit", "terminator -e  'tor-autocircuit ; zsh'" },
-{ "tor-browser-en", "terminator -e  'tor-browser-en ; zsh'" },
 { "tor-router", "terminator -e  'tor-router ; zsh'" },
 { "truecrypt", "terminator -e  'truecrypt -t -h ; zsh'" },
 { "usb-canary", "terminator -e  'usb-canary -h ; zsh'" },
@@ -4773,6 +4766,8 @@ networkingmenu = {
 { "tincd", "terminator -e  'tincd ; zsh'" },
 { "topera", "terminator -e  'topera -h ; zsh'" },
 { "tor", "terminator -e  'tor -h ; zsh'" },
+{ "tor-autocircuit", "terminator -e  'tor-autocircuit ; zsh'" },
+{ "torbrowser", "torbrowser-launcher" },
 { "tor-gencert", "terminator -e  'tor-gencert ; zsh'" },
 { "tor-print-ed-signing-cert", "terminator -e  'tor-print-ed-signing-cert ; zsh'" },
 { "tor-resolve", "terminator -e  'tor-resolve ; zsh'" },

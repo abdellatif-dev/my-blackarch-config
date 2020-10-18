@@ -73,13 +73,8 @@ globalkeys = gears.table.join(
               {description = "focus the previous screen", group = "screen"}),
     awful.key({ modkey,           }, "u", awful.client.urgent.jumpto,
               {description = "jump to urgent client", group = "client"}),
-    awful.key({ modkey,           }, "Tab",
-        function ()
-            awful.client.focus.history.previous()
-            if client.focus then
-                client.focus:raise()
-            end
-        end,
+            --   rofi -show window
+    awful.key({ modkey, }, "Tab",  function () awful.util.spawn("/home/flagmate/.config/awesome/scripts/openedapps") end,
         {description = "go back", group = "client"}),
 
     -- Standard program
@@ -90,6 +85,25 @@ globalkeys = gears.table.join(
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
+
+            -- torbrowser-launcher
+
+    awful.key({ modkey, "Control"   }, "o", function () awful.util.spawn("torbrowser-launcher") end,
+        {description = "launch torbrowser", group = "launcher"}),
+
+	--chromium
+    awful.key({ modkey, "Control"   }, "c", function () awful.util.spawn("chromium") end,
+              {description = "launch chromium", group = "launcher"}),
+
+
+    awful.key({ modkey, "Control"   }, "d", function () awful.util.spawn("nemo Desktop/dev") end,
+              {description = "launch dev folder", group = "launcher"}),
+
+    awful.key({ modkey, "Control"   }, "h", function () awful.util.spawn("nemo Desktop/.hacking") end,
+              {description = "launch hacking folder", group = "launcher"}),
+
+    awful.key({ modkey, "Shift"   }, "t", function () awful.util.spawn("nemo .tools") end,
+              {description = "launch tools folder", group = "launcher"}),
 
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "layout"}),
@@ -129,7 +143,7 @@ globalkeys = gears.table.join(
 
 
     awful.key({ modkey, "Control" }, "f",     function () awful.util.spawn("nemo") end,
-              {description = "run thunar", group = "launcher"}),
+              {description = "run nemo", group = "launcher"}),
 
     awful.key({ modkey , "Control" }, "b",     function () awful.util.spawn("firefox") end,
               {description = "run Firefox", group = "launcher"}),
