@@ -74,7 +74,6 @@ myawesomemenu = {
 
 termmenu = {
   { "terminator", "terminator" },
-  { "gnome-terminal", "gnome-terminal" },
   { "term (grey)", "urxvt -fg grey -depth 32 -bg rgba:0008/001B/00E5/aaaa -e bash " },
   { "term (red)", "urxvt -fg red -depth 32 -bg rgba:0008/001B/00E5/aaaa -e bash " },
   { "term (green)", "urxvt -fg green -depth 32 -bg rgba:0008/001B/00E5/aaaa -e bash " },
