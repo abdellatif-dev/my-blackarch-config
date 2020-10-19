@@ -1,0 +1,9 @@
+[options]
+cursor_color = "#aaaaaa"
+font = Hack Nerd Font 12
+scrollbar_position = hidden
+scrollback_infinite = True
+[colors]
+foreground = #ffffff
+[colors]
+background = rgba(8, 12, 23, 0.7)

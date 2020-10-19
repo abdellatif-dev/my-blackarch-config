@@ -88,20 +88,10 @@
     palette = "#000551:#204a87:#4e9a06:#b82d2f:#e98567:#f57e04:#d3d7cf:#eeeeec:#888a85:#cc0000:#73d216:#babdb6:#3465a4:#f48f28:#55ffff:#babdb6"
     use_system_font = False
     rewrap_on_resize = False
-  [[root]]
-    background_color = "#300000"
-    background_darkness = 0.7
-    background_type = transparent
-    cursor_color = "#aaaaaa"
-    font = Hack Nerd Font 12
-    foreground_color = "#f3f3f3"
-    scrollbar_position = hidden
-    scrollback_infinite = True
-    palette = "#300000:#ff0000:#eeeeec:#cc0000:#799eec:#a40000:#3fbfbd:#ffffff:#ef2929:#ff5555:#5555ff:#17b8d5:#799eec:#729fcf:#ff4545:#000000"
-    use_system_font = False
-    rewrap_on_resize = False
   [[vim]]
     background_color = "#0f111a"
+    background_darkness = 0.7
+    background_type = transparent
     cursor_color = "#aaaaaa"
     font = Hack Nerd Font 12
     foreground_color = "#ffffff"
