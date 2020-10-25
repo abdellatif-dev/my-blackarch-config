@@ -7,7 +7,7 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # my alias
-alias wifi='sudo iwconfig'
+alias wifi='ifconfig'
 alias cl='clear'
 alias root='sudo zsh'
 alias rt='rm * -rf'
@@ -90,8 +90,8 @@ CASE_SENSITIVE="true"
 
 export UPDATE_ZSH_DAYS=13
 
-
 alias tools="cd ~/.tools/"
+
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
