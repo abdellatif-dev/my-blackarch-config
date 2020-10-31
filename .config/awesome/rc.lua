@@ -1,23 +1,12 @@
--- If LuaRocks is installed, make sure that packages installed through it are
--- found (e.g. lgi). If LuaRocks is not installed, do nothing.
-pcall(require, "luarocks.loader")
-
--- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
 require("awful.autofocus")
--- Widget and layout library
-local wibox = require("wibox")
+
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Notification library
-local naughty = require("naughty")
-local menubar = require("menubar")
-local hotkeys_popup = require("awful.hotkeys_popup")
--- Enable hotkeys help widget for VIM and other apps
--- when client with a matching name is opened:
-require("awful.hotkeys_popup.keys")
 
+local menubar = require("menubar")
 
 require("shortcuts")
 require("layouts")
@@ -74,10 +63,7 @@ myawesomemenu = {
 
 termmenu = {
   { "termite", "termite" },
-  { "cool-retro-term", "cool-retro-term" },
-  { "terminology", "terminology" },
   { "terminator", "terminator" },
-  { "gnome-terminal", "gnome-terminal" },
   { "term (grey)", "urxvt -fg grey -depth 32 -bg rgba:0008/001B/00E5/aaaa -e bash " },
   { "term (red)", "urxvt -fg red -depth 32 -bg rgba:0008/001B/00E5/aaaa -e bash " },
   { "term (green)", "urxvt -fg green -depth 32 -bg rgba:0008/001B/00E5/aaaa -e bash " },
