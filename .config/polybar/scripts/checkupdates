@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/sh
 #
 #   checkupdates: Safely print a list of pending updates.
 #

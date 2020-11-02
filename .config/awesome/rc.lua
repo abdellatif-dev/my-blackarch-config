@@ -62,8 +62,10 @@ myawesomemenu = {
 }
 
 termmenu = {
+  {"simple terminal" ,"st"},
   { "termite", "termite" },
   { "terminator", "terminator" },
+  { "xfce4 terminal", "xfce4-terminal" }, 
   { "term (grey)", "urxvt -fg grey -depth 32 -bg rgba:0008/001B/00E5/aaaa -e bash " },
   { "term (red)", "urxvt -fg red -depth 32 -bg rgba:0008/001B/00E5/aaaa -e bash " },
   { "term (green)", "urxvt -fg green -depth 32 -bg rgba:0008/001B/00E5/aaaa -e bash " },
@@ -74,19 +76,14 @@ termmenu = {
 browsermenu = {
   { "firefox", "firefox" },
   { "chromium", "chromium" },
-  { "torbrowser", "torbrowser-launcher" }
+  {"brave", "brave"},
+  { "torbrowser", "torbrowser-launcher" },
 }
 
 networkmenu = {
   { "wifi-radar", "wifi-radar" },
   { "wifi-radar-polkit", "wifi-radar-polkit" },
   { "iwctl", "terminator -e 'iwctl'" }
-}
-
-extra = {
-  { "ranger", "terminator -e 'ranger'" },
-  { "twin", "twin" },
-
 }
 
 shells = {
@@ -9403,7 +9400,6 @@ items = {
   {"shells", shells},
   { "network", networkmenu },
   { "browsers", browsermenu },
-  {"extra", extra},
   { "awesome", myawesomemenu },
 }
 })

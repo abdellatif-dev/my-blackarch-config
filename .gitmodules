@@ -1,0 +1,6 @@
+[submodule ".tools/ethical-hacking"]
+	path = .tools/ethical-hacking
+	url = https://github.com/abdellatif-dev/ethical-hacking-examples.git
+[submodule ".tools/privilege-escalation-awesome-scripts-suite"]
+	path = .tools/privilege-escalation-awesome-scripts-suite
+	url = https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git

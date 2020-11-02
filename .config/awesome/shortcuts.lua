@@ -64,7 +64,7 @@ globalkeys = gears.table.join(
 
     -- Standard program
     awful.key({ modkey, "Control" }, "t", function () awful.spawn(terminal) end,
-              {description = "open a xfce4-terminal", group = "launcher"}),
+              {description = "open a terminator", group = "launcher"}),
     
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
@@ -87,8 +87,8 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Control"   }, "h", function () awful.util.spawn("nemo Desktop/.hacking") end,
               {description = "launch hacking folder", group = "launcher"}),
 
-    awful.key({ modkey, "Shift"   }, "t", function () awful.util.spawn("nemo .tools") end,
-              {description = "launch tools folder", group = "launcher"}),
+    awful.key({ modkey, "Shift"   }, "t", function () awful.util.spawn("termite") end,
+              {description = "launch termite", group = "launcher"}),
 
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "layout"}),
@@ -130,8 +130,8 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Control" }, "f",     function () awful.util.spawn("nemo") end,
               {description = "run nemo", group = "launcher"}),
 
-    awful.key({ modkey , "Control" }, "b",     function () awful.util.spawn("firefox") end,
-              {description = "run Firefox", group = "launcher"}),
+    awful.key({ modkey , "Control" }, "b",     function () awful.util.spawn("brave") end,
+              {description = "run brave", group = "launcher"}),
 
     awful.key({ modkey , "Control" }, "s",     function () awful.util.spawn("subl") end,
               {description = "run subllime text 3", group = "security"}),

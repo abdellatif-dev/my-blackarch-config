@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 ## Author : Aditya Shakya
 ## Github : adi1090x

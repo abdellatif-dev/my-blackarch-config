@@ -12,10 +12,10 @@ local themes_path = gfs.get_themes_dir()
 
 theme = {}
 
-theme.useless_gap   = dpi(5)
+theme.useless_gap   = dpi(3)
 theme.border_width  = dpi(3)
 
-theme.font          = "Hack Nerd Font Regular 8"
+theme.font          = "Hack Nerd Font Regular 11"
 
 theme.bg_normal     = "#181818"
 theme.bg_focus      = "#000000"
@@ -50,8 +50,8 @@ theme.taglist_squares_unsel = "/usr/share/awesome/themes/blackarch/taglist/squar
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
 theme.menu_submenu_icon = "/usr/share/awesome/themes/blackarch/submenu.png"
-theme.menu_height = 15
-theme.menu_width  = 160
+theme.menu_height = 17
+theme.menu_width  = 170
 
 -- You can add as many variables as
 -- you wish and access them by using

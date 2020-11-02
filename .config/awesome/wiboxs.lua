@@ -11,7 +11,7 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 
 
 -- clock
-local mytextclock = wibox.widget.textclock('<span font="hack Nerd Font regular 9"></span> %A %d/%b/%Y || %r ')
+--local mytextclock = wibox.widget.textclock('<span font="hack Nerd Font regular 13"></span> %A %d/%b/%Y || %r ')
 
 
 beautiful.init(gears.filesystem.get_configuration_dir() .. "theme.lua")
@@ -60,7 +60,7 @@ local tasklist_buttons = gears.table.join(
 awful.screen.connect_for_each_screen(function(s)
 
     -- Create a promptbox for each screen
-    s.mypromptbox = awful.widget.prompt()
+    --s.mypromptbox = awful.widget.prompt()
     -- Create an imagebox widget which will contain an icon indicating which layout we're using.
     -- We need one layoutbox per screen.
     s.mylayoutbox = awful.widget.layoutbox(s)
@@ -95,7 +95,7 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
             mykeyboardlayout,
             wibox.widget.systray(),
-            mytextclock,
+            --mytextclock,
             s.mylayoutbox,
         },
     }
