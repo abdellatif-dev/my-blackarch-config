@@ -1,0 +1,59 @@
+set realname = "abdellatif Temsamani"
+set from = "<your gmail>@gmail.com"
+set use_from = yes
+set envelope_from = yes
+
+set smtp_url = "smtps://<your gmail>@smtp.gmail.com:465/"
+set smtp_pass = "*****************"
+
+set imap_user = "<your gmail>@gmail.com"
+set imap_pass = "***********************"
+
+set folder = "imaps://<your gmail>@imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set ssl_force_tls = yes
+
+mailboxes =INBOX
+
+set imap_check_subscribed
+set move = no 
+set imap_keepalive = 900
+
+set header_cache =~/.mutt/cache/headers 
+set message_cachedir =~/.mutt/cache/bodies 
+set certificate_file =~/.mutt/certificates
+
+# G to get mail
+# bind index G imap-fetch-mail
+set editor = "vim"
+
+
+mono bold bold
+mono underline underline
+mono indicator reverse
+mono error bold
+
+set sidebar_visible = yes
+set sidebar_width = 20
+set sidebar_short_path = yes
+set sidebar_next_new_wrap = yes
+set mail_check_stats
+bind index,pager B sidebar-toggle-visible
+
+set date_format="%y/%m/%d %I:%M%p"
+set index_format="%2C %Z %?X?A& ? %D %-15.15F %s (%-4.4c)"
+set sort = 'reverse-date'
+set rfc2047_parameters = yes
+set sleep_time = 0		# Pause 0 seconds for informational messages
+set markers = no		# Disables the `+` displayed at line wraps
+set mark_old = no		# Unread mail stay unread until read
+set mime_forward = yes		# attachments are forwarded with mail
+set wait_key = no		# mutt won't ask "press key to continue"
+set fast_reply			# skip to compose when replying
+set fcc_attach			# save attachments with the body
+set forward_format = "Fwd: %s"	# format of subject when forwarding
+set forward_quote		# include message in forwards
+set reverse_name		# reply as whomever it was to
+set include			# include message in replies
+
+
