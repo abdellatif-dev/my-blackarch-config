@@ -56,4 +56,5 @@ set forward_quote		# include message in forwards
 set reverse_name		# reply as whomever it was to
 set include			# include message in replies
 
+source colors.muttrc
 
