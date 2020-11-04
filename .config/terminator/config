@@ -97,7 +97,7 @@
     foreground_color = "#ffffff"
     scrollbar_position = hidden
     scrollback_infinite = True
-    palette = "#0f111a:#d41919:#799eec:#e98567:#3fbfbd:#7f5f98:#272729:#bbbbbb:#198388:#ec0101:#89ddff:#fac86a:#16e3a1:#c590e7:#31333a:#000000"
+    palette = "#0f111a:#d41919:#799eec:#e98567:#3fbfbd:#7f5f98:#c4c4cb:#bbbbbb:#198388:#ec0101:#89ddff:#fac86a:#16e3a1:#c590e7:#31333a:#000000"
     custom_command = vim .
     use_system_font = False
     rewrap_on_resize = False
@@ -109,5 +109,5 @@
     [[[child1]]]
       type = Terminal
       parent = window0
-      profile = flagmate
+      profile = vim
 [plugins]
