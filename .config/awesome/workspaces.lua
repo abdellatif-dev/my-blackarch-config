@@ -8,6 +8,6 @@ awful.screen.connect_for_each_screen(function(s)
 
 
     -- Each screen has its own tag table.
-    awful.tag({ " ","爵 ", " ", " ", " "," ﴣ", " ", " ", "漣 " }, s, awful.layout.layouts[1])
+    awful.tag({ " ", " ", " ", " ﴣ", " ", " ","辶 " , " ", "拓 " }, s, awful.layout.layouts[1])
 end)
 -- }}}
