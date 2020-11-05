@@ -66,14 +66,16 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Control" }, "t", function () awful.spawn(terminal) end,
               {description = "open terminator", group = "tools"}),
 
-
-    awful.key({ modkey, "Control" }, "a", function () awful.util.spawn("/home/flagmate/.config/awesome/scripts/mixer") end,
-              {description = "open alsamixer", group = "script"}),
+    awful.key({ modkey,  }, "t", function () awful.util.spawn("xfce4-terminal") end,
+              {description = "open terminator", group = "tools"}),
 
     awful.key({ modkey, "Control" }, "a", function () awful.util.spawn("/home/flagmate/.config/awesome/scripts/mixer") end,
               {description = "open alsamixer", group = "script"}),
 
     awful.key({ modkey, }, "c", function () awful.util.spawn("/home/flagmate/.config/polybar/scripts/color-switch.sh") end,
+              {description = "switch color of polybar", group = "script"}),
+    
+    awful.key({ modkey, "Control" }, "s", function () awful.util.spawn("simplescreenrecorder") end,
               {description = "switch color of polybar", group = "script"}),
     
 
@@ -148,8 +150,9 @@ globalkeys = gears.table.join(
     awful.key({ modkey , "Control" }, "b",     function () awful.util.spawn("brave") end,
               {description = "run brave", group = "tools"}),
 
-    awful.key({ modkey , "Control" }, "s",     function () awful.util.spawn("subl") end,
-              {description = "run subllime text 3", group = "tools"}),
+    awful.key({ modkey , "Shift" }, "b",     function () awful.util.spawn("firefox") end,
+              {description = "run firefox", group = "tools"}),
+
 
     awful.key({ modkey , "Control" }, "v",     function () awful.util.spawn("code") end,
              {description = "run vs code", group = "tools"}),
@@ -177,8 +180,6 @@ clientkeys = gears.table.join(
               {description = "move to master", group = "client"}),
     awful.key({ modkey,           }, "o",      function (c) c:move_to_screen()               end,
               {description = "move to screen", group = "client"}),
-    awful.key({ modkey,           }, "t",      function (c) c.ontop = not c.ontop            end,
-              {description = "toggle keep on top", group = "client"}),
     awful.key({ modkey,           }, "n",
         function (c)
             -- The client currently has the input focus, so it cannot be

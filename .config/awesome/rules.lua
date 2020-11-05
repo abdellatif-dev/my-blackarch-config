@@ -1,12 +1,13 @@
+local gears = require("gears")
 local awful = require("awful")
 local beautiful = require("beautiful")
-
 
 -- {{{ Rules
 -- Rules to apply to new clients (through the "manage" signal).
 awful.rules.rules = {
     -- All clients will match this rule.
-    { rule = { },
+    { rule = {
+     },
       properties = { border_width = beautiful.border_width,
                      border_color = beautiful.border_normal,
                      focus = awful.client.focus.filter,
@@ -15,9 +16,25 @@ awful.rules.rules = {
                      buttons = clientbuttons,
                      screen = awful.screen.preferred,
                      placement = awful.placement.no_overlap+awful.placement.no_offscreen
-     }
+     },
+    
     },
+    -- app rules
+    { rule = { instance = "brave" }, properties = { tag = " " } },
+    { rule = { instance = "chromium" }, properties = { tag = " " } },
+    
+    { rule = { instance = "terminator" }, properties = { tag = " " } },
+    { rule = { instance = "xfce4-terminal" }, properties = { tag = " " } },
+    { rule = { instance = "termite" }, properties = { tag = " " } },
+    
+    { rule = { instance = "code" }, properties = { tag = " " } },
+    { rule = { instance = "termite" }, properties = { tag = " " } },
 
+    { rule = { instance = "nemo" }, properties = { tag = " " } },
+    
+    { rule = { instance = "polybar" }, properties = { tag = "拓 " } },
+    { rule = { instance = "simplescreenrecorder" }, properties = { tag = "拓 " } },
+    
     -- Floating clients.
     { rule_any = {
         class = {
@@ -63,4 +80,3 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
-
