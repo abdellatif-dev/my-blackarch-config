@@ -9341,7 +9341,7 @@ wireless ={
   { "wireless 13", wirelessmenu13 },
 }
 
-blackarchmenu = {
+blackarchmenu1 = {
   { "anti-forensic", antiforensicmenu },
   { "automation", automation },
   { "automobile", automobilemenu },
@@ -9365,6 +9365,9 @@ blackarchmenu = {
   { "firmware", firmwaremenu },
   { "forensic", forensic },
   { "fuzzer", fuzzer },
+}
+
+blackarchmenu2 = {
   { "hardware", hardwaremenu },
   { "honeypot", honeypotmenu },
   { "ids", idsmenu },
@@ -9393,6 +9396,11 @@ blackarchmenu = {
   { "wireless", wireless },  
 }
 
+blackarchmenu = {
+  { "blackarch 1", blackarchmenu1},
+  { "blackarch 2", blackarchmenu2},
+}
+
 mymainmenu = awful.menu({
 items = {
   { "blackarch", blackarchmenu, beautiful.awesome_icon },
@@ -9404,9 +9412,3 @@ items = {
 }
 })
 
-mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
-                                   menu = mymainmenu })
-
--- Menubar configuration
-menubar.utils.terminal = terminal -- Set the terminal for applications that require it
--- }}}

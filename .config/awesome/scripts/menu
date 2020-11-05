@@ -36,12 +36,14 @@ LIGHT_GREEN="#7cb342"
 # Launch Rofi
 rofi -no-lazy-grab -show drun \
 -display-drun "Apps || tools " -drun-display-format "{name}" \
--hide-scrollbar true \
+-hide-scrollbar false \
 -bw 0 \
 -lines 10 \
 -line-padding 10 \
--padding 20 \
--width 30 \
+-padding 15 \
+-disable-history \
+-hide-scrollbar \
+-width 33 \
 -xoffset 27 -yoffset 60 \
 -location 1 \
 -columns 2 \

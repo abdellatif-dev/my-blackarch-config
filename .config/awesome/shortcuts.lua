@@ -64,11 +64,17 @@ globalkeys = gears.table.join(
 
     -- Standard program
     awful.key({ modkey, "Control" }, "t", function () awful.spawn(terminal) end,
-              {description = "open a terminator", group = "tools"}),
+              {description = "open terminator", group = "tools"}),
 
 
-    awful.key({ modkey, "Control" }, "k", function () awful.util.spawn("kdenlive") end,
-              {description = "open a kdenlive", group = "tools"}),
+    awful.key({ modkey, "Control" }, "a", function () awful.util.spawn("/home/flagmate/.config/awesome/scripts/mixer") end,
+              {description = "open alsamixer", group = "script"}),
+
+    awful.key({ modkey, "Control" }, "a", function () awful.util.spawn("/home/flagmate/.config/awesome/scripts/mixer") end,
+              {description = "open alsamixer", group = "script"}),
+
+    awful.key({ modkey, }, "c", function () awful.util.spawn("/home/flagmate/.config/polybar/scripts/color-switch.sh") end,
+              {description = "switch color of polybar", group = "script"}),
     
 
     awful.key({ modkey, "Control" }, "r", awesome.restart,

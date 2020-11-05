@@ -1,0 +1,14 @@
+Use_Label=false
+Show_Values=true
+Show_Bars=true
+Colorize_Values=true
+Color_In=rgb(164,0,0)
+Color_Out=rgb(32,74,135)
+Text=wlan0
+Network_Device=wlan0
+Max_In=4096
+Max_Out=4096
+Auto_Max=true
+Update_Interval=100
+Values_As_Bits=true
+
