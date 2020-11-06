@@ -23,11 +23,11 @@ globalkeys = gears.table.join(
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
-              {description = "view previous", group = "workscpace"}),
+              {description = "view previous", group = "tag"}),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
-              {description = "view next", group = "workscpace"}),
+              {description = "view next", group = "tag"}),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
-              {description = "go back", group = "workscpace"}),
+              {description = "go back", group = "tag"}),
 
               
     awful.key({ modkey, "Control"    }, "Left",
@@ -52,31 +52,33 @@ globalkeys = gears.table.join(
               {description = "swap with next client by index", group = "client"}),
     awful.key({ modkey, "Shift"   }, "Right", function () awful.client.swap.byidx( -1)    end,
               {description = "swap with previous client by index", group = "client"}),
-    awful.key({ modkey, "Control" }, "k", function () awful.screen.focus_relative( 1) end,
-              {description = "focus the next screen", group = "screen"}),
-    awful.key({ modkey, "Control" }, "j", function () awful.screen.focus_relative(-1) end,
-              {description = "focus the previous screen", group = "screen"}),
     awful.key({ modkey,           }, "u", awful.client.urgent.jumpto,
               {description = "jump to urgent client", group = "client"}),
             --   rofi -show window
     awful.key({ modkey, }, "Tab",  function () awful.util.spawn("/home/flagmate/.config/awesome/scripts/openedapps") end,
-        {description = "focus apps", group = "script"}),
+        {description = "focus apps", group = "a script"}),
 
     -- Standard program
     awful.key({ modkey, "Control" }, "t", function () awful.spawn(terminal) end,
-              {description = "open terminator", group = "tools"}),
+              {description = "open terminator", group = "a software"}),
 
     awful.key({ modkey,  }, "t", function () awful.util.spawn("xfce4-terminal") end,
-              {description = "open terminator", group = "tools"}),
+            {description = "open xfce4-terminal", group = "a software"}),
+
+    awful.key({ modkey, "Control"  }, "l", function () awful.util.spawn("libreoffice") end,
+              {description = "open libreoffice", group = "a software"}),
+
+    awful.key({ modkey, "Control"  }, "k", function () awful.util.spawn("kdenlive") end,
+              {description = "open kdenlive", group = "a software"}),
 
     awful.key({ modkey, "Control" }, "a", function () awful.util.spawn("/home/flagmate/.config/awesome/scripts/mixer") end,
-              {description = "open alsamixer", group = "script"}),
+              {description = "open alsamixer", group = "a script"}),
 
     awful.key({ modkey, }, "c", function () awful.util.spawn("/home/flagmate/.config/polybar/scripts/color-switch.sh") end,
-              {description = "switch color of polybar", group = "script"}),
+              {description = "switch color of polybar", group = "a script"}),
     
     awful.key({ modkey, "Control" }, "s", function () awful.util.spawn("simplescreenrecorder") end,
-              {description = "switch color of polybar", group = "script"}),
+              {description = "simple screen recorder", group = "a script"}),
     
 
     awful.key({ modkey, "Control" }, "r", awesome.restart,
@@ -87,29 +89,16 @@ globalkeys = gears.table.join(
             -- torbrowser-launcher
 
     awful.key({ modkey, "Control"   }, "o", function () awful.util.spawn("torbrowser-launcher") end,
-        {description = "launch torbrowser", group = "launcher"}),
+        {description = "launch torbrowser", group = "a software"}),
 
 	--chromium
     awful.key({ modkey, "Control"   }, "c", function () awful.util.spawn("chromium") end,
-              {description = "launch chromium", group = "launcher"}),
+              {description = "launch chromium", group = "a software"}),
 
 
 
     awful.key({ modkey, "Shift"   }, "t", function () awful.util.spawn("termite") end,
-              {description = "launch termite", group = "launcher"}),
-
-    awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
-              {description = "increase master width factor", group = "layout"}),
-    awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)          end,
-              {description = "decrease master width factor", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "h",     function () awful.tag.incnmaster( 1, nil, true) end,
-              {description = "increase the number of master clients", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "l",     function () awful.tag.incnmaster(-1, nil, true) end,
-              {description = "decrease the number of master clients", group = "layout"}),
-    awful.key({ modkey, "Control" }, "h",     function () awful.tag.incncol( 1, nil, true)    end,
-              {description = "increase the number of columns", group = "layout"}),
-    awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)    end,
-              {description = "decrease the number of columns", group = "layout"}),
+              {description = "launch termite", group = "a software"}),
     awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
               {description = "select next", group = "layout"}),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
@@ -129,36 +118,36 @@ globalkeys = gears.table.join(
 
 
     awful.key({modkey }, "r", function () awful.util.spawn("/home/flagmate/.config/awesome/scripts/menu") end,
-              {description= "menu", group="script"}),
+              {description= "menu", group= "a script"}),
 
     awful.key({modkey, "Shift"}, "r", function () awful.util.spawn("/home/flagmate/.config/awesome/scripts/menu_full") end,
-              {description= "full menu", group="script"}),
+              {description= "full menu", group= "a script"}),
 
     awful.key({ modkey, "Control" }, "m",  function () awful.util.spawn("/home/flagmate/.config/awesome/scripts/mail") end,
-              {description = "run mutt", group = "script"}),
+              {description = "run mutt", group = "a script"}),
 
     awful.key({ modkey, "Shift"  }, "o",     function () awful.util.spawn("obs") end,
-              {description = "run nemo", group = "tools"}),
+              {description = "run nemo", group = "a software"}),
 
 
     awful.key({ modkey, "Control"}, "p",     function () awful.util.spawn("pavucontrol") end,
-            {description = "run nemo", group = "tools"}),
+            {description = "run nemo", group = "a software"}),
 
     awful.key({ modkey, "Control" }, "f",     function () awful.util.spawn("nemo") end,
-              {description = "run nemo", group = "tools"}),
+              {description = "run nemo", group = "a software"}),
 
     awful.key({ modkey , "Control" }, "b",     function () awful.util.spawn("brave") end,
-              {description = "run brave", group = "tools"}),
+              {description = "run brave", group = "a software"}),
 
     awful.key({ modkey , "Shift" }, "b",     function () awful.util.spawn("firefox") end,
-              {description = "run firefox", group = "tools"}),
+              {description = "run firefox", group = "a software"}),
 
 
     awful.key({ modkey , "Control" }, "v",     function () awful.util.spawn("code") end,
-             {description = "run vs code", group = "tools"}),
+             {description = "run vs code", group = "a software"}),
 
     awful.key({ modkey , "Control" }, "g",     function () awful.util.spawn("gimp") end,
-             {description = "run gimp", group = "tools"}),
+             {description = "run gimp", group = "a software"}),
 
              -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
@@ -175,7 +164,7 @@ clientkeys = gears.table.join(
     awful.key({ modkey, }, "w",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
-              {description = "toggle floating", group = "client"}),
+              {description = "toggle floating", group = "layout"}),
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end,
               {description = "move to master", group = "client"}),
     awful.key({ modkey,           }, "o",      function (c) c:move_to_screen()               end,
@@ -215,7 +204,7 @@ for i = 1, 9 do
                            tag:view_only()
                         end
                   end,
-                  {description = "view tag #"..i, group = "workscpace"}),
+                  {description = "view tag #"..i, group = "tag"}),
         -- Toggle tag display.
         awful.key({ modkey, "Control" }, "#" .. i + 9,
                   function ()
@@ -225,7 +214,7 @@ for i = 1, 9 do
                          awful.tag.viewtoggle(tag)
                       end
                   end,
-                  {description = "toggle tag #" .. i, group = "workscpace"}),
+                  {description = "toggle tag #" .. i, group = "tag"}),
         -- Move client to tag.
         awful.key({ modkey, "Shift" }, "#" .. i + 9,
                   function ()
@@ -236,18 +225,7 @@ for i = 1, 9 do
                           end
                      end
                   end,
-                  {description = "move focused client to tag #"..i, group = "workscpace"}),
-        -- Toggle tag on focused client.
-        awful.key({ modkey, "Control", "Shift" }, "#" .. i + 9,
-                  function ()
-                      if client.focus then
-                          local tag = client.focus.screen.tags[i]
-                          if tag then
-                              client.focus:toggle_tag(tag)
-                          end
-                      end
-                  end,
-                  {description = "toggle focused client on tag #" .. i, group = "workscpace"})
+                  {description = "move focused client to tag #"..i, group = "tag"})
     )
 end
 

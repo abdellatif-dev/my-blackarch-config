@@ -17,22 +17,22 @@ theme.border_width  = dpi(3)
 
 theme.font          = "Hack Nerd Font 12"
 
-theme.bg_normal     = "#181818"
-theme.bg_focus      = "#000000"
-theme.bg_urgent     = "#91231c"
-theme.bg_minimize   = "#202020"
+theme.bg_normal     = "#0F1010"
+theme.bg_focus      = "#0F111A"
+theme.bg_urgent     = "#D41919"
+theme.bg_minimize   = "#090A0F"
 theme.bg_systray    = theme.bg_normal
 
 theme.fg_normal     = "#aaaaaa"
-theme.fg_focus      = "#6298e0"
+theme.fg_focus      = "#E98567"
 theme.fg_urgent     = "#000000"
-theme.fg_minimize   = "#000000"
+theme.fg_minimize   = "#FAC86A"
 
 
-theme.border_width  = 1
-theme.border_normal = "#181818"
-theme.border_focus  = "#316ab7"
-theme.border_marked = "#91231c"
+theme.border_width  = 4
+theme.border_normal = "#57F199"
+theme.border_focus  = "#89DDFF"
+theme.border_marked = "#EC0101"
 
 
 local taglist_square_size = dpi(4)

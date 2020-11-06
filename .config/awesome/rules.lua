@@ -29,9 +29,16 @@ awful.rules.rules = {
     { rule = { instance = "termite" }, properties = { tag = " " } },
     
     { rule = { instance = "code" }, properties = { tag = " " } },
-    { rule = { instance = "termite" }, properties = { tag = " " } },
-
+    
+    { rule = { instance = "wireshark" }, properties = { tag = " ﴣ" } },
+    { rule = { instance = "johnny" }, properties = { tag = " ﴣ" } },
+    
     { rule = { instance = "nemo" }, properties = { tag = " " } },
+    
+    { rule = { instance = "libreoffice" }, properties = { tag = " " } },
+    { rule = { instance = "gimp" }, properties = { tag = " " } },
+
+    { rule = { instance = "kdenlive" }, properties = { tag = "辶 " } },
     
     { rule = { instance = "polybar" }, properties = { tag = "拓 " } },
     { rule = { instance = "simplescreenrecorder" }, properties = { tag = "拓 " } },
