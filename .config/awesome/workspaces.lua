@@ -15,6 +15,11 @@ beautiful.fg_urgent     = "#000000"
 beautiful.fg_minimize   = "#FAC86A"
 
 
+beautiful.border_width  = 1
+beautiful.border_normal = "#57F199"
+beautiful.border_focus  = "#89DDFF"
+beautiful.border_marked = "#EC0101"
+
 
 awful.screen.connect_for_each_screen(function(s)
 
