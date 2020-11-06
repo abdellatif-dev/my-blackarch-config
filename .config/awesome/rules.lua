@@ -27,6 +27,7 @@ awful.rules.rules = {
     { rule = { instance = "terminator" }, properties = { tag = " " } },
     { rule = { instance = "xfce4-terminal" }, properties = { tag = " " } },
     { rule = { instance = "termite" }, properties = { tag = " " } },
+    { rule = { class = "st" }, properties = { tag = " " } },
     
     { rule = { instance = "code" }, properties = { tag = " " } },
     

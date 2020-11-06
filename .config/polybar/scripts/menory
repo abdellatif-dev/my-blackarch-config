@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo " [mem: $(free -h | awk '/^Mem:/ {print $3 "/" $2}')]\
+ [swap: $(free -h | awk '/^Swap:/ {print $3 "/" $2}')]"

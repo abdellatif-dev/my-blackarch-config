@@ -7,9 +7,6 @@ local dpi = xresources.apply_dpi
 
 local gfs = require("gears.filesystem")
 local themes_path = gfs.get_themes_dir()
-
-
-
 theme = {}
 
 theme.useless_gap   = dpi(5)
@@ -17,8 +14,8 @@ theme.border_width  = dpi(3)
 
 theme.font          = "Hack Nerd Font 12"
 
-theme.bg_normal     = "#0F1010"
-theme.bg_focus      = "#0F111A"
+theme.bg_normal     = "#0F111A"
+theme.bg_focus      = "#0F1010"
 theme.bg_urgent     = "#D41919"
 theme.bg_minimize   = "#090A0F"
 theme.bg_systray    = theme.bg_normal
@@ -29,19 +26,11 @@ theme.fg_urgent     = "#000000"
 theme.fg_minimize   = "#FAC86A"
 
 
-theme.border_width  = 4
+theme.border_width  = 1
 theme.border_normal = "#57F199"
 theme.border_focus  = "#89DDFF"
 theme.border_marked = "#EC0101"
 
-
-local taglist_square_size = dpi(4)
-theme.taglist_squares_sel = theme_assets.taglist_squares_sel(
-    taglist_square_size, theme.fg_normal
-)
-theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
-    taglist_square_size, theme.fg_normal
-)
 
 -- Display the taglist squares
 theme.taglist_squares_sel   = "/usr/share/awesome/themes/blackarch/taglist/squarefw.png"
@@ -52,7 +41,7 @@ theme.taglist_squares_unsel = "/usr/share/awesome/themes/blackarch/taglist/squar
 -- menu_[border_color|border_width]
 theme.menu_submenu_icon = "/usr/share/awesome/themes/blackarch/submenu.png"
 theme.menu_height = 17
-theme.menu_width  = 170
+theme.menu_width  = 180
 
 -- You can add as many variables as
 -- you wish and access them by using

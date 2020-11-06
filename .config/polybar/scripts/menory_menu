@@ -1,0 +1,3 @@
+#!/bin/sh
+
+ps -axch -o cmd,%mem --sort=-%mem  | head | dmenu -l 10 
