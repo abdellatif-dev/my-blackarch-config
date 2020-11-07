@@ -16,3 +16,11 @@
 * run menu
     ![pics/6.png](pics/6.png)
     ![pics/7.png](pics/7.png)
+
+# coming soon
+-----------------------------------------------
+- [ ] update polybar
+
+- [ ] update screenshots
+
+- [ ] make a script to auto installation
