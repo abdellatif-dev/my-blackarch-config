@@ -22,50 +22,58 @@ root.buttons(gears.table.join(
 globalkeys = gears.table.join(
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
-    awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
+    awful.key({ modkey,           }, "h",   awful.tag.viewprev,
               {description = "view previous", group = "tag"}),
-    awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
+    awful.key({ modkey,           }, "l",  awful.tag.viewnext,
               {description = "view next", group = "tag"}),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
 
+    awful.key({ modkey, "Control"    }, "h", function () awful.client.focus.byidx(1) end,
+              {description = "focus next by index", group = "client"}),
+        
+    awful.key({ modkey, "Control"    }, "l", function () awful.client.focus.byidx(-1) end, 
+              {description = "focus previous by index", group = "client"}),
+          
+    awful.key({ modkey, "Shift"   }, "h", function () awful.client.swap.byidx(  1)    end,
+              {description = "swap with next client by index", group = "client"}), 
+          
+    awful.key({ modkey, "Shift"   }, "l", function () awful.client.swap.byidx( -1)    end,
+              {description = "swap with previous client by index", group = "client"}),
               
-    awful.key({ modkey, "Control"    }, "Left",
-        function ()
-            awful.client.focus.byidx(1)
-        end,
-        {description = "focus next by index", group = "client"}
-    ),
-    awful.key({ modkey, "Control"    }, "Right",
-        function ()
-            awful.client.focus.byidx(-1)
-        end,
-        {description = "focus previous by index", group = "client"}
-    ),
+
+    -- awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
+    --           {description = "view previous", group = "tag"}),
+    -- awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
+    --           {description = "view next", group = "tag"}),
+    -- awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
+    --           {description = "go back", group = "tag"}),
+    -- awful.key({ modkey, "Control"    }, "Left", function () awful.client.focus.byidx(1) end,
+    --     {description = "focus next by index", group = "client"}),
+    -- awful.key({ modkey, "Control"    }, "Right", function () awful.client.focus.byidx(-1) end, 
+    --     {description = "focus previous by index", group = "client"}),
+    -- awful.key({ modkey, "Shift"   }, "Left", function () awful.client.swap.byidx(  1)    end,
+    --     {description = "swap with next client by index", group = "client"}), 
+    -- awful.key({ modkey, "Shift"   }, "Right", function () awful.client.swap.byidx( -1)    end,
+    --     {description = "swap with previous client by index", group = "client"}),
 
     awful.key({ modkey, "Shift"  }, "w", function () mymainmenu:show() end,
-              {description = "show main menu", group = "awesome"}),
-
-              
+            {description = "show main menu", group = "awesome"}),
+        
     -- Layout manipulation
-    awful.key({ modkey, "Shift"   }, "Left", function () awful.client.swap.byidx(  1)    end,
-              {description = "swap with next client by index", group = "client"}),
-    awful.key({ modkey, "Shift"   }, "Right", function () awful.client.swap.byidx( -1)    end,
-              {description = "swap with previous client by index", group = "client"}),
     awful.key({ modkey,           }, "u", awful.client.urgent.jumpto,
-              {description = "jump to urgent client", group = "client"}),
-            --   rofi -show window
+            {description = "jump to urgent client", group = "client"}),
     awful.key({ modkey, }, "Tab",  function () awful.util.spawn("/home/flagmate/.config/awesome/scripts/openedapps") end,
-        {description = "focus apps", group = "a script"}),
+            {description = "focus apps", group = "a script"}),
 
     -- Standard program
     awful.key({ modkey, "Control" }, "t", function () awful.spawn(terminal) end,
-              {description = "open terminator", group = "a software"}),
+            {description = "open terminator", group = "a software"}),
 
     awful.key({ modkey,  }, "t", function () awful.util.spawn("xfce4-terminal") end,
             {description = "open xfce4-terminal", group = "a software"}),
 
-    awful.key({ modkey, "Control"  }, "l", function () awful.util.spawn("libreoffice") end,
+    awful.key({ modkey, }, "o", function () awful.util.spawn("libreoffice") end,
               {description = "open libreoffice", group = "a software"}),
 
     awful.key({ modkey, "Control"  }, "k", function () awful.util.spawn("kdenlive") end,
@@ -122,6 +130,12 @@ globalkeys = gears.table.join(
 
     awful.key({ modkey, "Control" }, "m",  function () awful.util.spawn("/home/flagmate/.config/awesome/scripts/mail") end,
               {description = "run mutt", group = "a script"}),
+
+    awful.key({ modkey, "Shift" }, "v",  function () awful.util.spawn("/home/flagmate/.config/awesome/scripts/vim") end,
+              {description = "run vim", group = "a script"}),
+
+    awful.key({ modkey, "Shift" }, "f",  function () awful.util.spawn("/home/flagmate/.config/awesome/scripts/ranger") end,
+              {description = "run ranger", group = "a script"}),
 
     awful.key({ modkey, "Shift"  }, "o",     function () awful.util.spawn("obs") end,
               {description = "run nemo", group = "a software"}),
