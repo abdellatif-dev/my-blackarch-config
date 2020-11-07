@@ -32,6 +32,7 @@ theme.border_focus  = "#89DDFF"
 theme.border_marked = "#EC0101"
 
 
+
 -- Display the taglist squares
 theme.taglist_squares_sel   = "/usr/share/awesome/themes/blackarch/taglist/squarefw.png"
 theme.taglist_squares_unsel = "/usr/share/awesome/themes/blackarch/taglist/squarew.png"
