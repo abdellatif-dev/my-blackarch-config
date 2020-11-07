@@ -11,7 +11,7 @@ beautiful.bg_systray    = beautiful.bg_normal
 
 beautiful.fg_normal     = "#aaaaaa"
 beautiful.fg_focus      = "#E98567"
-beautiful.fg_urgent     = "#000000"
+beautiful.fg_urgent     = "#0F111A"
 beautiful.fg_minimize   = "#FAC86A"
 
 beautiful.border_width  = 1.5
