@@ -3,16 +3,17 @@
 * Hack Nerd Font
 * Any Nerd Font can work
 
+# install
+ * Copy everything to you $HOME folder 
+ * on ~/.config/mutt/muttrc and put you email in order for it to work
+ * install all the apps awesome wm polybar zsh zsh plugins.....
 # screenshots
 -----------------------------------------------
 
-    |        desktop          |
-    |:-----------------------:|
-    |![pics/1.png](pics/1.png)|
 
-  |mod4+shift+w or right click menu|
-  |:------------------------------:|
-  |   ![pics/2.png](pics/2.png)    |
+  |mod4+shift+w or right click menu|        desktop          |screenkey for creators    |
+  |:------------------------------:|:-----------------------:|:------------------------:|
+  |![pics/2.png](pics/2.png)       |![pics/1.png](pics/1.png)|![pics/8.png](pics/8.png) |
 
    |        layouts          |
    |:-----------------------:|
@@ -23,13 +24,6 @@
   |          Run menu                                   |
   |:---------------------------------------------------:|
   | ![pics/6.png](pics/6.png) ![pics/7.png](pics/7.png) |
-
-
-|
-
-  | screenkey for creators  |
-  |:-----------------------:|
-  |![pics/8.png](pics/8.png)|
  
 # todo 
 -----------------------------------------------
