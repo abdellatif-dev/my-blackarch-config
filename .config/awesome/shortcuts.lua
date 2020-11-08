@@ -41,7 +41,6 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Shift"   }, "l", function () awful.client.swap.byidx( -1)    end,
               {description = "swap with previous client by index", group = "client"}),
               
-
     -- awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
     --           {description = "view previous", group = "tag"}),
     -- awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
@@ -134,8 +133,8 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Shift" }, "v",  function () awful.util.spawn("/home/flagmate/.config/awesome/scripts/vim") end,
               {description = "run vim", group = "a script"}),
 
-    awful.key({ modkey, "Shift" }, "f",  function () awful.util.spawn("/home/flagmate/.config/awesome/scripts/ranger") end,
-              {description = "run ranger", group = "a script"}),
+    awful.key({ modkey, "Shift" }, "f",  function () awful.util.spawn("/home/flagmate/.config/awesome/scripts/vifm") end,
+              {description = "run vifm", group = "a script"}),
 
     awful.key({ modkey, "Shift"  }, "o",     function () awful.util.spawn("obs") end,
               {description = "run nemo", group = "a software"}),
