@@ -17,13 +17,14 @@
     ![pics/4.png](pics/4.png)
     ![pics/5.png](pics/5.png)
 
-* run
-  |          Run menu         |   full screen run menu    |
-  |:-------------------------:|:-------------------------:|
-  | ![pics/6.png](pics/6.png) | ![pics/7.png](pics/7.png) |
-* screenkey
-    ![pics/8.png](pics/8.png)
+  |          Run menu                                   | screenkey for creators  |
+  |:---------------------------------------------------:|:-----------------------:|
+  | ![pics/6.png](pics/6.png) ![pics/7.png](pics/7.png) |![pics/8.png](pics/8.png)|
 
+  | screenkey for creators  |
+  |:-----------------------:|
+  |![pics/8.png](pics/8.png)|
+ 
 # todo 
 -----------------------------------------------
 - [X] awesome window manager
