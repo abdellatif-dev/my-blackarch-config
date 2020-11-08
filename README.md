@@ -1,4 +1,7 @@
 # my black arch config
+## font 
+* Hack Nerd Font
+* Any Nerd Font can work
 
 # screenshots
 -----------------------------------------------
@@ -27,7 +30,4 @@
 
 - [X] update screenshots
 
-- [X] normal linux
-
 - [ ] make a script to auto installation
-
