@@ -99,7 +99,11 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Control"   }, "c", function () awful.util.spawn("chromium") end,
               {description = "launch chromium", group = "a software"}),
 
+    awful.key({ modkey,  }, "Return",     function () awful.util.spawn("screenkey") end,
+              {description = "run screenkey", group = "a software"}),
 
+    awful.key({ modkey, "Shift"  }, "Return",     function () awful.util.spawn(" killall screenkey") end,
+              {description = "stop screenkey", group = "a software"}),
 
     awful.key({ modkey, "Shift"   }, "t", function () awful.util.spawn("termite") end,
               {description = "launch termite", group = "a software"}),
