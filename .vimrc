@@ -100,16 +100,7 @@ let g:pymode_syntax_builtin_types=g:pymode_syntax_all
 let g:pymode_syntax_highlight_exceptions=g:pymode_syntax_all
 let g:pymode_syntax_docstrings=g:pymode_syntax_all
 
-augroup vimrc_autocmds
-    autocmd!
-    autocmd FileType python,rst,c,cpp highlight Excess ctermbg=DarkGrey guibg=Black
-    autocmd FileType python,rst,c,cpp match Excess /\%81v.*/
-    autocmd FileType python,rst,c,cpp set nowrap
-    autocmd FileType python,rst,c,cpp set colorcolumn=80
-augroup END
-
 " stop here
-
 let g:cpp_no_function_highlight = 1
 let g:cpp_simple_highlight = 1
 let g:cpp_named_requirements_highlight = 1
@@ -158,18 +149,21 @@ nmap <leader>o :Files <CR>
 nmap <leader>co :Commits <CR>
 nmap <leader>h :help key-notation<CR>
 
-nmap <S-Right> <C-w>l
-nmap <S-Left> <C-w>h
-nmap <S-Up> <C-w>k
-nmap <S-Down> <c-w>j
+
+
+nmap <S-l> <C-w>l
+nmap <S-h> <C-w>h
+nmap <S-k> <C-w>k
+nmap <S-j> <c-w>j
 
 nmap <leader>z :undo<CR>
 nmap <leader>u :UndotreeShow<CR>
 
-nnoremap <C-Up> :resize +2<CR>
-nnoremap <C-Down> :resize -2<CR>
-nnoremap <C-Left> :vertical resize +2<CR>
-nnoremap <C-Right> :vertical resize -2<CR>
+
+nnoremap <C-k> :resize +2<CR>
+nnoremap <C-j> :resize -2<CR>
+nnoremap <C-h> :vertical resize +2<CR>
+nnoremap <C-l> :vertical resize -2<CR>
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 if has('nvim')
@@ -200,6 +194,7 @@ endfunction
 " }}}
 
 " FUNCTIONS {{{
+"
 " correct label for folding block in vimrc
 set foldtext=MyFoldText()
 function! MyFoldText()
@@ -250,6 +245,7 @@ function! s:get_visual_selection()
   let lines[0] = lines[0][column_start - 1:]
   return join(lines, "\n")
 endfunction
+" 
 " }}}
 
 

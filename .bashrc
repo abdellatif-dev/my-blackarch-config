@@ -65,7 +65,10 @@ alias cp="cp -i"
 alias mv="mv -i"
 alias vim="vim"
 alias vi="vim ./"
+alias sthelp='cat ~/.config/st/man.md'
 
 # source files
 [ -r /usr/share/bash-completion/completions ] &&
   . /usr/share/bash-completion/completions/*
+
+PATH=$PATH:/home/flagmate/.tools/010editor;export PATH; # ADDED BY INSTALLER - DO NOT EDIT OR DELETE THIS COMMENT - 87FF8EFC-483D-BCAA-D67D-735CF60410D1 70E93305-2946-284C-994C-C8410CE09AA7

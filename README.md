@@ -26,8 +26,34 @@
 
 # todo 
 -----------------------------------------------
-- [X] update polybar
+- [X] awesome window manager
 
-- [X] update screenshots
+- [X] polybar
+
+- [X] screenshots
 
 - [ ] make a script to auto installation
+
+# installation script
+================================================
+
+- [X] everything depends on user choices
+
+- [X] update packages
+
+- [X] install blackarch metapackage (hacking tools fot blackarch)
+        `insert n if you have regular arch distro without blackarch`
+
+- [ ] ohmyzsh
+
+- [ ] zsh
+
+- [ ] bash
+
+- [ ] vim
+
+- [ ] neovim
+
+- [ ] neomutt
+
+-
