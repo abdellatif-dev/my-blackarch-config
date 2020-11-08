@@ -23,9 +23,11 @@
 
 # todo 
 -----------------------------------------------
-- [ ] update polybar
+- [X] update polybar
 
-- [ ] update screenshots
+- [X] update screenshots
+
+- [X] normal linux
 
 - [ ] make a script to auto installation
 
