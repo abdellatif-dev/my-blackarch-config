@@ -17,10 +17,10 @@
     ![pics/4.png](pics/4.png)
     ![pics/5.png](pics/5.png)
 
-* run menu
-    ![pics/6.png](pics/6.png)
-    ![pics/7.png](pics/7.png)
-
+* run
+  |          Run menu         |   full screen run menu    |
+  |:-------------------------:|:-------------------------:|
+  | ![pics/6.png](pics/6.png) | ![pics/7.png](pics/7.png) |
 * screenkey
     ![pics/8.png](pics/8.png)
 
@@ -54,6 +54,19 @@
 
 - [ ] neovim
 
+- [ ] Vifm
+
 - [ ] neomutt
 
--
+- [ ] termintator
+
+- [ ] termite
+
+- [ ] xfce terminal
+
+- [ ] St terminal (my build)
+
+- [ ]  awesome config
+
+- [ ]  polybar
+
