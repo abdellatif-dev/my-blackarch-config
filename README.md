@@ -15,11 +15,10 @@
   |:------------------------------:|:-----------------------:|:------------------------:|
   |![pics/2.png](pics/2.png)       |![pics/1.png](pics/1.png)|![pics/8.png](pics/8.png) |
 
-   |        layouts          |
-   |:-----------------------:|
-   |![pics/3.png](pics/3.png)|
-   |![pics/4.png](pics/4.png)|
-   |![pics/5.png](pics/5.png)|
+   |        layout1          |        layout2          |        layout3          |
+   |:-----------------------:|:-----------------------:|:-----------------------:|
+   |![pics/3.png](pics/3.png)|![pics/4.png](pics/4.png)|![pics/5.png](pics/5.png)|
+   
 
   |          Run menu                                   |
   |:---------------------------------------------------:|
@@ -45,9 +44,9 @@
 - [X] install blackarch metapackage (hacking tools fot blackarch)
         `insert n if you have regular arch distro without blackarch`
 
-- [ ] ohmyzsh
+- [X] zsh
 
-- [ ] zsh
+- [ ] ohmyzsh
 
 - [ ] bash
 

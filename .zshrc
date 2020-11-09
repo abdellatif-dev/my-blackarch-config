@@ -172,7 +172,6 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source /home/flagmate/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-PATH=$PATH:/home/flagmate/.tools/010editor;export PATH; # ADDED BY INSTALLER - DO NOT EDIT OR DELETE THIS COMMENT - 87FF8EFC-483D-BCAA-D67D-735CF60410D1 70E93305-2946-284C-994C-C8410CE09AA7
 
 bindkey -v
 
