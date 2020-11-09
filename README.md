@@ -44,17 +44,38 @@
 - [X] install blackarch metapackage (hacking tools fot blackarch)
         `insert n if you have regular arch distro without blackarch`
 
+## install
 - [X] zsh
 
+- [X] vim
+
+- [X] neovim
+
+- [X] vifm
+
+- [X] neomutt
+
+- [X] termintator
+
+- [X] termite
+
+- [X] xfce terminal
+
+- [ ]  polybar
+
+- [ ] St terminal (my build)
+
+## config
+
+- [ ] zsh
+
 - [ ] bash
+
+- [ ] Vifm
 
 - [ ] vim
 
 - [ ] neovim
-
-- [ ] ohmyzsh
-
-- [ ] Vifm
 
 - [ ] neomutt
 
@@ -64,8 +85,6 @@
 
 - [ ] xfce terminal
 
-- [ ] St terminal (my build)
-
 - [ ]  awesome config
 
-- [ ]  polybar
+- [ ]  polybar confign 

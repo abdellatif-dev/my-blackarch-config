@@ -89,7 +89,7 @@ alias gp=gitpush
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
     . /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
     # change suggestion color
-    ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#666'
+    ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
 fi
 
 
@@ -112,6 +112,15 @@ COMPLETION_WAITING_DOTS="true"
 
 source $ZSH/oh-my-zsh.sh
 
+bindkey -v
+
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+
+export KEYTIMEOUT=1
+
 # User configuration
 
 export MANPATH="/usr/local/man:$MANPATH"
@@ -132,21 +141,12 @@ export ARCHFLAGS="-arch x86_64"
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 source /usr/share/autojump/autojump.zsh 2>/dev/null
-
+source /usr/share/zsh-navigation-tools/zsh-navigation-tools.plugin.zsh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+source /home/flagmate/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source /home/flagmate/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 PATH=$PATH:/home/flagmate/.tools/010editor;export PATH; 
-
-bindkey -v
-
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'k' vi-up-line-or-history
-bindkey -M menuselect 'l' vi-forward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
-
-export KEYTIMEOUT=1
-

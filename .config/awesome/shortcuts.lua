@@ -41,6 +41,7 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Shift"   }, "l", function () awful.client.swap.byidx( -1)    end,
               {description = "swap with previous client by index", group = "client"}),
               
+
     -- awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
     --           {description = "view previous", group = "tag"}),
     -- awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
@@ -99,11 +100,7 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Control"   }, "c", function () awful.util.spawn("chromium") end,
               {description = "launch chromium", group = "a software"}),
 
-    awful.key({ modkey,  }, "Return",     function () awful.util.spawn("screenkey") end,
-              {description = "run screenkey", group = "a software"}),
 
-    awful.key({ modkey, "Shift"  }, "Return",     function () awful.util.spawn(" killall screenkey") end,
-              {description = "stop screenkey", group = "a software"}),
 
     awful.key({ modkey, "Shift"   }, "t", function () awful.util.spawn("termite") end,
               {description = "launch termite", group = "a software"}),
@@ -141,11 +138,14 @@ globalkeys = gears.table.join(
               {description = "run vifm", group = "a script"}),
 
     awful.key({ modkey, "Shift"  }, "o",     function () awful.util.spawn("obs") end,
-              {description = "run nemo", group = "a software"}),
+              {description = "run obs", group = "a software"}),
 
+    awful.key({ modkey,  }, "Return",     function () awful.util.spawn("screenkey") end,
+              {description = "run screenkey", group = "a software"}),
 
-    awful.key({ modkey, "Control"}, "p",     function () awful.util.spawn("pavucontrol") end,
-            {description = "run nemo", group = "a software"}),
+    awful.key({ modkey, "Shift"  }, "Return",     function () awful.util.spawn("killall screenkey") end,
+              {description = "stop screenkey", group = "a software"}),
+
 
     awful.key({ modkey, "Control" }, "f",     function () awful.util.spawn("nemo") end,
               {description = "run nemo", group = "a software"}),
@@ -155,7 +155,6 @@ globalkeys = gears.table.join(
 
     awful.key({ modkey , "Shift" }, "b",     function () awful.util.spawn("firefox") end,
               {description = "run firefox", group = "a software"}),
-
 
     awful.key({ modkey , "Control" }, "v",     function () awful.util.spawn("code") end,
              {description = "run vs code", group = "a software"}),

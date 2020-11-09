@@ -32,6 +32,8 @@ awful.rules.rules = {
     { rule = { instance = "code" }, properties = { tag = " " } },
     
     { rule = { instance = "wireshark" }, properties = { tag = " ﴣ" } },
+    { rule = { instance = "hopper" }, properties = { tag = " ﴣ" } },
+    { rule = { class = "ghidra" }, properties = { tag = " ﴣ" } },
     { rule = { instance = "johnny" }, properties = { tag = " ﴣ" } },
     
     { rule = { instance = "nemo" }, properties = { tag = " " } },
