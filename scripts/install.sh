@@ -34,10 +34,8 @@ printf "install zsh[Y/n]: "
 read -r confirm
 case $confirm in
    "y") echo "installing zsh" && pacman -S zsh zsh-autosuggestions zsh-theme-powerlevel10k $installconfirm;;
-   "Y") echo "installing zsh" && pacman -S zsh zsh-autosuggestions zsh-theme-powerlevel10k $installconfirm;;
+   "Y") echo "installing zsh" && pacman -S zsh zsh-autosuggestions zsh-theme-powerlevel10k $installconfirm && ohmyzshinstall;;
      *) echo "skipping";;
 esac
 
-
-# echo "Installing ohmyzsh"
-# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sleep 1;

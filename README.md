@@ -46,13 +46,13 @@
 
 - [X] zsh
 
-- [ ] ohmyzsh
-
 - [ ] bash
 
 - [ ] vim
 
 - [ ] neovim
+
+- [ ] ohmyzsh
 
 - [ ] Vifm
 
@@ -69,4 +69,3 @@
 - [ ]  awesome config
 
 - [ ]  polybar
-
