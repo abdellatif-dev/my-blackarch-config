@@ -33,8 +33,8 @@ sleep 1
 printf "\n"
 
 printf "install vim[Y/n]: "
-read -r confirm
-case $confirm in
+read -r vimconfrim
+case $vimconfrim in
    "y") echo "installing vim" &&sudo pacman -S vim neovim vifm $installconfirm;;
    "Y") echo "installing vim" &&sudo pacman -S vim neovim vifm $installconfirm;;
      *) echo "skipping";;
@@ -67,6 +67,18 @@ sleep 1
 printf "\n"
 
 
+printf "install neofetch set[Y/n]: "
+read -r confirm
+case $confirm in
+   "y") echo "installing neofetch" &&sudo pacman -S neofetch $installconfirm;;
+   "Y") echo "installing neofetch" &&sudo pacman -S neofetch $installconfirm;;
+     *) echo "skipping";;
+esac
+
+sleep 1
+printf "\n"
+
+
 printf "install polybar[Y/n]: "
 read -r confirm
 case $confirm in
@@ -83,10 +95,29 @@ read -r confirm
 case $confirm in
    "y") echo "installing st terminal" && git clone https://github.com/abdellatif-dev/st.git\
          && cd st\
-         && sudo make clean install 2>/dev/null;;
+         && sudo make clean install 2>/dev/null && make man 2>/dev/null 1>/dev/null;;
    "Y") echo "installing st terminal" && git clone https://github.com/abdellatif-dev/st.git\
          && cd st\
-         && sudo make clean install 2>/dev/null;;
+         && sudo make clean install 2>/dev/null && make man 2>/dev/null 1>/dev/null;;
+     *) echo "skipping";;
+esac
+
+sleep 1
+
+printf "configuring"
+
+sleep 1
+printf "\n"
+
+echo "configuring awesome" && cp -r ../.config/awesome ~/.config/;;
+
+sleep 1
+printf "\n"
+
+
+case $vimconfrim in
+   "Y") echo "configuring vim" && cp -r ../.vim* ~/;;
+   "y") echo "configuring vim" && cp -r ../.vim* ~/;;
      *) echo "skipping";;
 esac
 

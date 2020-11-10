@@ -61,19 +61,27 @@
 
 - [X] xfce terminal
 
+- [X] neoftech
+
 - [X]  polybar
 
 - [X] St terminal (my build)
 
 ## config
 
+- [X]  awesome config
+
+- [ ]  polybar confign 
+
 - [ ] zsh
+
+- [ ] neoftech
 
 - [ ] bash
 
 - [ ] Vifm
 
-- [ ] vim
+- [X] vim
 
 - [ ] neovim
 
@@ -83,8 +91,4 @@
 
 - [ ] termite
 
-- [ ] xfce terminal
-
-- [ ]  awesome config
-
-- [ ]  polybar confign 
+- [ ] xfce4 terminal
