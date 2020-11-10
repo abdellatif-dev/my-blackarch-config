@@ -116,8 +116,8 @@ printf "\n"
 
 
 case $vimconfrim in
-   "Y") echo "configuring vim" && cp -r ../.vim* ~/;;
-   "y") echo "configuring vim" && cp -r ../.vim* ~/;;
+   "Y") echo "configuring vim" && cp -r ../.vim* ~/ && cp -r ../.config/vifm ../.config/nvim ~/.config;;
+   "y") echo "configuring vim" && cp -r ../.vim* ~/ && cp -r ../.config/vifm ../.config/nvim ~/.config;;
      *) echo "skipping";;
 esac
 

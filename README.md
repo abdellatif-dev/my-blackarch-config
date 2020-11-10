@@ -79,11 +79,11 @@
 
 - [ ] bash
 
-- [ ] Vifm
+- [X] Vifm
 
 - [X] vim
 
-- [ ] neovim
+- [X] neovim
 
 - [ ] neomutt
 
