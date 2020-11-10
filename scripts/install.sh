@@ -44,8 +44,8 @@ sleep 1
 printf "\n"
 
 printf "install mutt email client[Y/n]: "
-read -r confirm
-case $confirm in
+read -r muttconfirm
+case $muttconfirm in
    "y") echo "installing mutt" &&sudo pacman  -S neomutt $installconfirm;;
    "Y") echo "installing mutt" &&sudo pacman  -S neomutt $installconfirm;;
     *) echo "skipping";;
@@ -109,7 +109,9 @@ printf "configuring"
 sleep 1
 printf "\n"
 
-echo "configuring awesome" && cp -r ../.config/awesome ~/.config/;;
+echo "configuring awesome" && cp -r ../.config/awesome ~/.config/
+echo "configuring bash" && cp ../.bash* ~
+
 
 sleep 1
 printf "\n"
@@ -123,3 +125,12 @@ esac
 
 sleep 1
 printf "\n"
+
+printf "install mutt email client[Y/n]: "
+case $muttconfirm in
+   "y") echo "configuring mutt" && vim ../.config/mutt/muttrc\
+         cp -r ../.config/mutt ~/.config;;
+   "Y") echo "configuring mutt" && vim ../.config/mutt/muttrc\
+         cp -r ../.config/mutt ~/.config;;
+    *) echo "skipping";;
+esac

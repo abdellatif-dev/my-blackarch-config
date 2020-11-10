@@ -75,9 +75,7 @@
 
 - [ ] zsh
 
-- [ ] neoftech
-
-- [ ] bash
+- [X] bash
 
 - [X] Vifm
 
@@ -85,10 +83,12 @@
 
 - [X] neovim
 
-- [ ] neomutt
+- [X] neomutt
 
 - [ ] termintator
 
 - [ ] termite
 
 - [ ] xfce4 terminal
+
+- [ ] neoftech
