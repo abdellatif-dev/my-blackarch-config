@@ -56,10 +56,10 @@ printf "\n"
 
 
 printf "install terminals set[Y/n]: "
-read -r confirm
-case $confirm in
-   "y") echo "installing terminals" &&sudo pacman -S termintator termite xfce4-terminal $installconfirm;;
-   "Y") echo "installing terminals" &&sudo pacman -S termintator termite xfce4-terminal $installconfirm;;
+read -r terminalsconfirm
+case $terminalsconfirm in
+   "y") echo "installing terminals" &&sudo pacman -S terminator termite xfce4-terminal $installconfirm;;
+   "Y") echo "installing terminals" &&sudo pacman -S terminator termite xfce4-terminal $installconfirm;;
      *) echo "skipping";;
 esac
 
@@ -68,8 +68,8 @@ printf "\n"
 
 
 printf "install neofetch set[Y/n]: "
-read -r confirm
-case $confirm in
+read -r neofetchconfirm
+case $neofetchconfirm in
    "y") echo "installing neofetch" &&sudo pacman -S neofetch $installconfirm;;
    "Y") echo "installing neofetch" &&sudo pacman -S neofetch $installconfirm;;
      *) echo "skipping";;
@@ -80,8 +80,8 @@ printf "\n"
 
 
 printf "install polybar[Y/n]: "
-read -r confirm
-case $confirm in
+read -r polybarconfirm
+case $polybarconfirm in
    "y") echo "installing polybar" &&yay -S polybar $installconfirm;;
    "Y") echo "installing polybar" &&yay -S polybar $installconfirm;;
      *) echo "skipping";;
@@ -91,8 +91,8 @@ sleep 1
 printf "\n"
 
 printf "install st terminal [Y/n]: "
-read -r confirm
-case $confirm in
+read -r stconfirm
+case $stconfirm in
    "y") echo "installing st terminal" && git clone https://github.com/abdellatif-dev/st.git\
          && cd st\
          && sudo make clean install 2>/dev/null && make man 2>/dev/null 1>/dev/null;;
@@ -103,34 +103,5 @@ case $confirm in
 esac
 
 sleep 1
-
-printf "configuring"
-
-sleep 1
 printf "\n"
-
-echo "configuring awesome" && cp -r ../.config/awesome ~/.config/
-echo "configuring bash" && cp ../.bash* ~
-
-
-sleep 1
-printf "\n"
-
-
-case $vimconfrim in
-   "Y") echo "configuring vim" && cp -r ../.vim* ~/ && cp -r ../.config/vifm ../.config/nvim ~/.config;;
-   "y") echo "configuring vim" && cp -r ../.vim* ~/ && cp -r ../.config/vifm ../.config/nvim ~/.config;;
-     *) echo "skipping";;
-esac
-
-sleep 1
-printf "\n"
-
-printf "install mutt email client[Y/n]: "
-case $muttconfirm in
-   "y") echo "configuring mutt" && vim ../.config/mutt/muttrc\
-         cp -r ../.config/mutt ~/.config;;
-   "Y") echo "configuring mutt" && vim ../.config/mutt/muttrc\
-         cp -r ../.config/mutt ~/.config;;
-    *) echo "skipping";;
-esac
+echo "everything is ready for $USER"
