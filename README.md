@@ -61,9 +61,9 @@
 
 - [X] xfce terminal
 
-- [ ]  polybar
+- [X]  polybar
 
-- [ ] St terminal (my build)
+- [X] St terminal (my build)
 
 ## config
 
