@@ -60,7 +60,7 @@ alias dud='du -d 1 -h'
 alias duf='du -sh *'
 alias fd='find . -type d -name'
 alias ff='find . -type f -name'
-
+alias pdfviewer='zathura'
 alias sthelp='cat ~/.config/st/man.md'
 
 alias h='history'
@@ -136,16 +136,19 @@ else
    export EDITOR='mvim'
 fi
 
+
+[ -f "$HOME/zsh/aliasrc" ] && source "$HOME/zsh/aliasrc"
+
+bindkey '^ ' autosuggest-accept
+
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
 
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 source /usr/share/autojump/autojump.zsh 2>/dev/null
 source /usr/share/zsh-navigation-tools/zsh-navigation-tools.plugin.zsh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-
-source /home/flagmate/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
