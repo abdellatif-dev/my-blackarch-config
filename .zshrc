@@ -47,13 +47,21 @@ alias hacking='cd ~/Desktop/.hacking/'
 alias dev='cd ~/Desktop/dev/'
 alias tools="cd ~/.tools/"
 alias scripts="cd ~/scripts"
-autoload -U compinit
-zstyle ':completion:*' menu select
-zmodload zsh/complist
-compinit
-_comp_options+=(globdots)   
 
 export EDITOR='vim'
+
+
+export ZSH="/home/flagmate/.oh-my-zsh"
+
+ZSH_THEME="robbyrussell"
+
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
+
 # vi mode
 bindkey -v
 
@@ -61,7 +69,6 @@ bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
-export KEYTIMEOUT=1
 
 # source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 source /usr/share/zsh-navigation-tools/zsh-navigation-tools.plugin.zsh
@@ -80,3 +87,4 @@ PATH=$PATH:/home/flagmate/.tools/010editor;export PATH;
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+export KEYTIMEOUT=1
