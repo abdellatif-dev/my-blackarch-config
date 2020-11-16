@@ -4,7 +4,13 @@ git add -A
 printf "comment: "
 read message
 git commit -m "$message"
-printf "branch: "
+
 printf "\n"
+echo "+==============================================================+"
+git status
+echo "+==============================================================+"
+sleep 1
+
+printf "branch: "
 read branch
 git push -u origin $branch
