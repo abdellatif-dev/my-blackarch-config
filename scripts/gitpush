@@ -1,0 +1,9 @@
+#!/bin/sh
+
+git add -A 
+printf "comment: "
+read message
+git commit -m "$message"
+printf "branch: "
+read branch
+git push -u origin $branch
