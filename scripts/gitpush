@@ -8,6 +8,6 @@ printf "branch: "
 printf "\n"
 
 git status
-sleep 4
+sleep 2
 read branch
 git push -u origin $branch
