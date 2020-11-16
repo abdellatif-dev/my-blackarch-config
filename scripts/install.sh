@@ -1,4 +1,21 @@
 #!/bin/sh
+echo "#=====================================#"
+echo "# by abdellatif-dev                   #"
+echo "# please follow me on                 #"
+echo "# github:                             #"
+echo "# https://github.com/abdellatif-dev   #"
+echo "#                                     #"
+echo "# tryhackme.com:                      #"
+echo "# https://tryhackme.com/p/flagmate    #"
+echo "#                                     #"
+echo "# twitter:                            #"
+echo "# https://twitter.com/DevAbdellatif   #"
+echo "#                                     #"
+echo "#=====================================#"
+
+printf "\n"
+printf "\n"
+
 echo "welcome $USER"
 sleep 2
 echo "blackarch config preparing installation"
@@ -130,5 +147,3 @@ case $stconfirm in
 esac
 printf "\n"
 
-echo "blackarch is ready for $USER"
-echo "by abdellatif-dev"
