@@ -86,6 +86,8 @@
 
   - [X] brave 
 
+  - [X] obs or simplescreenrecorder
+
 * config
 
   - [ ]  awesome config
