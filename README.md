@@ -70,6 +70,22 @@
 
   - [X] St terminal (my build)
 
+  - [X] rofi 
+  
+  - [x] lxappearance
+
+  - [X] breeze (theme/icons)
+
+  - [X] thunar
+
+  - [X] keyscreen
+
+  - [X] xarchiver
+
+  - [X] bat
+
+  - [X] brave 
+
 * config
 
   - [ ]  awesome config

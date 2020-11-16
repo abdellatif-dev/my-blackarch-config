@@ -8,6 +8,7 @@ printf "\n"
 
 updateconf="--noconfirm"
 installconfirm="--needed --noconfirm"
+extra="rofi lxappearance keyscreen breeze breeze-icons thunar xarchiver bat"
 
 printf "Update packages[Y/n]: "
 read -r confirm
@@ -87,8 +88,8 @@ case $polybarconfirm in
      *) echo "skipping";;
 esac
 
-sleep 1
 printf "\n"
+sleep 1
 
 printf "install st terminal [Y/n]: "
 read -r stconfirm
@@ -102,6 +103,32 @@ case $stconfirm in
      *) echo "skipping";;
 esac
 
-sleep 1
 printf "\n"
-echo "everything is ready for $USER"
+sleep 1
+
+printf "install extra  [Y/n]: "
+read -r stconfirm
+case $stconfirm in
+   "y") echo "installing extra " && sudo pacman -S $extra $noconfirm\
+        && yay -S brave-bin $noconfirm;;
+   "Y") echo "installing extra " && sudo pacman -S $extra $noconfirm\
+        && yay -S brave-bin $noconfirm;;
+     *) echo "skipping";;
+esac
+
+printf "\n"
+sleep 1
+
+printf "obs-studio or simplescreenrecorder"
+read -r stconfirm
+case $stconfirm in
+   "simplescreenrecorder") echo "installing extra " && sudo pacman -S simplescreenrecorder $noconfirm\
+        && yay -S brave-bin $noconfirm;;
+   "obs-studio") echo "installing extra " && sudo pacman -S obs-studio $noconfirm\
+        && yay -S brave-bin $noconfirm;;
+     *) echo "skipping";;
+esac
+printf "\n"
+
+echo "blackarch is ready for $USER"
+echo "by abdellatif-dev"
