@@ -1,0 +1,15 @@
+#!/bin/sh
+
+xrandr
+sleep 2
+
+printf "name of monitor: "
+read monitorname
+printf "\n"
+
+printf "resolution: "
+read resolution
+printf "\n"
+
+xrandr --output $monitorname --mode $resolution 
+echo "$monitorname has set to $resolution"

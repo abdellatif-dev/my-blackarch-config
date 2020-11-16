@@ -83,6 +83,7 @@ if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
 fi
 
 PATH=$PATH:/home/flagmate/.tools/010editor;export PATH; 
+PATH=$PATH:/home/flagmate/scripts/;export PATH; 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
