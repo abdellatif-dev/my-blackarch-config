@@ -46,51 +46,52 @@
 
 # script
 
-## install
-- [X] zsh
+* install
 
-- [X] vim
+  - [X] zsh
 
-- [X] neovim
+  - [X] vim
 
-- [X] vifm
+  - [X] neovim
 
-- [X] neomutt
+  - [X] vifm
 
-- [X] termintator
+  - [X] neomutt
 
-- [X] termite
+  - [X] termintator
 
-- [X] xfce terminal
+  - [X] termite
 
-- [X] neoftech
+  - [X] xfce terminal
 
-- [X]  polybar
+  - [X] neoftech
 
-- [X] St terminal (my build)
+  - [X]  polybar
 
-## config
+  - [X] St terminal (my build)
 
-- [ ]  awesome config
+* config
 
-- [ ]  polybar confign 
+  - [ ]  awesome config
 
-- [ ] zsh
+  - [ ]  polybar confign 
 
-- [ ] bash
+  - [ ] zsh
 
-- [ ] Vifm
+  - [ ] bash
 
-- [ ] vim
+  - [ ] Vifm
 
-- [ ] neovim
+  - [ ] vim
 
-- [ ] neomutt
+  - [ ] neovim
 
-- [ ] termintator
+  - [ ] neomutt
 
-- [ ] termite
+  - [ ] termintator
 
-- [ ] xfce4 terminal
+  - [ ] termite
 
-- [ ] neoftech
+  - [ ] xfce4 terminal
+
+  - [ ] neoftech
