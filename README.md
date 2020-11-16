@@ -113,3 +113,5 @@
   - [ ] xfce4 terminal
 
   - [ ] neoftech
+
+  - [ ] cp scripts to ~/scripts/ 
