@@ -6,8 +6,5 @@ read message
 git commit -m "$message"
 printf "branch: "
 printf "\n"
-
-git status
-sleep 2
 read branch
 git push -u origin $branch
