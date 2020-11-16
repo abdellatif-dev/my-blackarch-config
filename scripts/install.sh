@@ -25,7 +25,7 @@ printf "\n"
 
 updateconf="--noconfirm"
 installconfirm="--needed --noconfirm"
-extra="rofi lxappearance keyscreen breeze breeze-icons thunar xarchiver bat"
+extra="rofi lxappearance keyscreen breeze breeze-icons dmenu thunar xarchiver bat"
 
 printf "Update packages[Y/n]: "
 read -r confirm
