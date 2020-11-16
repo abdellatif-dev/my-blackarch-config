@@ -5,5 +5,13 @@ printf "comment: "
 read message
 git commit -m "$message"
 printf "branch: "
+sleep 1
+printf "\n"
+
+git status
+
+sleep 1
+printf "\n"
+
 read branch
 git push -u origin $branch
