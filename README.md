@@ -85,6 +85,8 @@
   - [X] bat
 
   - [X] brave 
+  
+  - [X] dmenu
 
   - [X] obs or simplescreenrecorder
 
