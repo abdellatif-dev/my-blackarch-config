@@ -1,15 +1,14 @@
 #!/bin/sh
 
 git add -A 
-printf "comment: "
-read message
-git commit -m "$message"
-
-printf "\n"
 echo "+==============================================================+"
 git status
 echo "+==============================================================+"
 sleep 1
+
+printf "comment: "
+read message
+git commit -m "$message"
 
 printf "branch: "
 read branch
