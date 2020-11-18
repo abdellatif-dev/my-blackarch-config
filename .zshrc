@@ -36,6 +36,7 @@ alias grep='grep --color'
 alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS} '
 # alias random_background='feh --randomize --bg-fill ~/Pictures/backgrounds/*'
 alias xdg='xdg-open'
+alias clh="history -c"
 alias pdfviewer='zathura'
 alias sthelp='cat ~/.config/st/man.md'
 alias rm='rm -iv'
@@ -49,7 +50,13 @@ alias tools="cd ~/.tools/"
 alias scripts="cd ~/scripts"
 
 export EDITOR='vim'
-
+setopt autocd            
+setopt correct            
+setopt interactivecomments
+setopt magicequalsubst     
+setopt nonomatch          
+setopt notify             
+setopt numericglobsort   
 
 export ZSH="/home/flagmate/.oh-my-zsh"
 
@@ -70,10 +77,10 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 
-# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 source /usr/share/zsh-navigation-tools/zsh-navigation-tools.plugin.zsh
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 export MANPATH="/usr/local/man:$MANPATH"
 # enable auto-suggestions based on the history
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
@@ -84,7 +91,7 @@ fi
 
 PATH=$PATH:/home/flagmate/.tools/010editor;export PATH; 
 PATH=$PATH:/home/flagmate/scripts/;export PATH; 
-
+PATH=$PATH:/home/flagmate/.tools/myscripts;export PATH; 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 

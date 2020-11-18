@@ -26,8 +26,7 @@ globalkeys = gears.table.join(
               {description = "view previous", group = "tag"}),
     awful.key({ modkey,           }, "l",  awful.tag.viewnext,
               {description = "view next", group = "tag"}),
-    awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
-              {description = "go back", group = "tag"}),
+    awful.key({ modkey,           }, "Escape", awful.tag.history.restore, {description = "go back", group = "tag"}),
 
     awful.key({ modkey, "Control"    }, "h", function () awful.client.focus.byidx(1) end,
               {description = "focus next by index", group = "client"}),
@@ -57,19 +56,22 @@ globalkeys = gears.table.join(
     -- awful.key({ modkey, "Shift"   }, "Right", function () awful.client.swap.byidx( -1)    end,
     --     {description = "swap with previous client by index", group = "client"}),
 
+    -- Standard program
     awful.key({ modkey, "Shift"  }, "w", function () mymainmenu:show() end,
             {description = "show main menu", group = "awesome"}),
         
-    -- Layout manipulation
-    awful.key({ modkey,           }, "u", awful.client.urgent.jumpto,
-            {description = "jump to urgent client", group = "client"}),
     awful.key({ modkey, }, "Tab",  function () awful.util.spawn("/home/flagmate/.config/awesome/scripts/openedapps") end,
             {description = "focus apps", group = "a script"}),
 
-    -- Standard program
     awful.key({ modkey, "Control" }, "t", function () awful.spawn(terminal) end,
             {description = "open terminator", group = "a software"}),
 
+    awful.key({ modkey,  }, "p", function () awful.util.spawn("passmenu") end,
+            {description = "open pass", group = "a software"}),
+
+    awful.key({ modkey,  }, "a", function () awful.util.spawn("alacritty") end,
+            {description = "open alacritty", group = "a software"}),
+            
     awful.key({ modkey,  }, "t", function () awful.util.spawn("xfce4-terminal") end,
             {description = "open xfce4-terminal", group = "a software"}),
 
@@ -79,12 +81,23 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Control"  }, "d", function () awful.util.spawn("kdenlive") end,
               {description = "open kdenlive", group = "a software"}),
 
-    awful.key({ modkey, "Control" }, "a", function () awful.util.spawn("/home/flagmate/.config/awesome/scripts/mixer") end,
-              {description = "open alsamixer", group = "a script"}),
+    awful.key({ modkey, "Shift"  }, "d", function () awful.util.spawn("discord") end,
+              {description = "open discord", group = "a software"}),
 
-    awful.key({ modkey, "Control" }, "s", function () awful.util.spawn("simplescreenrecorder") end,
-              {description = "simple screen recorder", group = "a script"}),
+    awful.key({ modkey, "Control" }, "a", function () awful.util.spawn("pavucontrol") end,
+              {description = "openp avucontrol", group = "a script"}),
+
+    awful.key({ modkey,  }, "0", function () awful.util.spawn("i3lock -i Pictures/1st-slider.png") end,
+              {description = "i3lock", group = "a software"}),
     
+    awful.key({ modkey, "Shift" }, "n", function () awful.util.spawn("nemo") end,
+              {description = "open nemo", group = "a software"}),
+    
+    awful.key({ modkey, "Control" }, "s", function () awful.util.spawn("simplescreenrecorder") end,
+              {description = "simplescreenrecorder", group = "a software"}),
+
+    awful.key({ modkey, }, "x", function () awful.util.spawn("lxappearance") end,
+              {description = "appearance", group = "a software"}),
 
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
@@ -147,8 +160,8 @@ globalkeys = gears.table.join(
               {description = "stop screenkey", group = "a software"}),
 
 
-    awful.key({ modkey, "Control" }, "f",     function () awful.util.spawn("nemo") end,
-              {description = "run nemo", group = "a software"}),
+    awful.key({ modkey, "Control" }, "f",     function () awful.util.spawn("thunar") end,
+              {description = "run thunar", group = "a software"}),
 
     awful.key({ modkey , "Control" }, "b",     function () awful.util.spawn("brave") end,
               {description = "run brave", group = "a software"}),

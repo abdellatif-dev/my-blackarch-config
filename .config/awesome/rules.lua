@@ -28,6 +28,7 @@ awful.rules.rules = {
     { rule = { instance = "xfce4-terminal" }, properties = { tag = " " } },
     { rule = { instance = "termite" }, properties = { tag = " " } },
     { rule = { class = "st" }, properties = { tag = " " } },
+    { rule = { instance = "alacritty" }, properties = { tag = " " } },
     
     { rule = { instance = "code" }, properties = { tag = " " } },
     
@@ -37,7 +38,8 @@ awful.rules.rules = {
     { rule = { instance = "johnny" }, properties = { tag = " ﴣ" } },
     
     { rule = { instance = "nemo" }, properties = { tag = " " } },
-    
+    { rule = { instance = "thunar" }, properties = { tag = " " } },
+
     { rule = { instance = "libreoffice" }, properties = { tag = " " } },
     { rule = { instance = "gimp" }, properties = { tag = " " } },
 
@@ -45,6 +47,11 @@ awful.rules.rules = {
     
     { rule = { instance = "polybar" }, properties = { tag = "拓 " } },
     { rule = { instance = "simplescreenrecorder" }, properties = { tag = "拓 " } },
+    { rule = { instance = "lxappearance" }, properties = { tag = "拓 " } },
+    { rule = { instance = "discord" }, properties = { tag = "拓 " } },
+    { rule = { instance = "pavucontrol" }, properties = { tag = "拓 " } },
+    
+
     
     -- Floating clients.
     { rule_any = {
