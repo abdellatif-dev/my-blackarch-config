@@ -146,4 +146,3 @@ case $stconfirm in
      *) echo "skipping";;
 esac
 printf "\n"
-
