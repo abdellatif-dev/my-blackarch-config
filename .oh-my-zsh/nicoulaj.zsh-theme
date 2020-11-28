@@ -34,8 +34,8 @@ zstyle ':vcs_info:*' enable hg bzr git
 zstyle ':vcs_info:*:*' check-for-changes true # Can be slow on big repos.
 zstyle ':vcs_info:*:*' unstagedstr '!'
 zstyle ':vcs_info:*:*' stagedstr '+'
-zstyle ':vcs_info:*:*' actionformats "%S" "%r/%s/%b %u%c (%a)"
-zstyle ':vcs_info:*:*' formats "%S" "%r/%s/%b %u%c"
+zstyle ':vcs_info:*:*' actionformats "%(?.√.?%?) %1~" "(%u)"
+zstyle ':vcs_info:*:*' formats "%(?.√.?%?)" "%r/%s/%b %u%c"
 zstyle ':vcs_info:*:*' nvcsformats "%(?.√.?%?) %1~" ""
 
 # Define prompts.
