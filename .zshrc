@@ -14,7 +14,7 @@ export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 # If you come from bash you might have to change your $PATH.
 # my alias
 alias wifi='ifconfig wlan0'
-alias cl='clear'
+alias cl='reset'
 alias rt='rm * -rf'
 alias ip='ip -color=auto'
 alias diff='diff --color=auto'
@@ -36,9 +36,10 @@ alias grep='grep --color'
 alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS} '
 # alias random_background='feh --randomize --bg-fill ~/Pictures/backgrounds/*'
 alias xdg='xdg-open'
-alias clh="history -c"
+alias clh="history -c;reset"
 alias pdfviewer='zathura'
 alias sthelp='cat ~/.config/st/man.md'
+alias gtc='git clone'
 alias rm='rm -iv'
 alias cp='cp -iv'
 alias mv='mv -iv'
@@ -48,6 +49,9 @@ alias hacking='cd ~/Desktop/.hacking/'
 alias dev='cd ~/Desktop/dev/'
 alias tools="cd ~/.tools/"
 alias scripts="cd ~/scripts"
+alias shinedown="cd ~/Music/shinedown/"
+alias live="cd ~/Music/live/"
+alias music="cd ~/Music/"
 
 export EDITOR='vim'
 setopt autocd            
@@ -60,7 +64,7 @@ setopt numericglobsort
 
 export ZSH="/home/flagmate/.oh-my-zsh"
 
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="nicoulaj"
 
 plugins=(git)
 
@@ -80,8 +84,10 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 source /usr/share/zsh-navigation-tools/zsh-navigation-tools.plugin.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+#source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 export MANPATH="/usr/local/man:$MANPATH"
+source ~/.config/zsh/nicoulaj.zsh-theme
+
 # enable auto-suggestions based on the history
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
     . /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -92,7 +98,27 @@ fi
 PATH=$PATH:/home/flagmate/.tools/010editor;export PATH; 
 PATH=$PATH:/home/flagmate/scripts/;export PATH; 
 PATH=$PATH:/home/flagmate/.tools/myscripts;export PATH; 
+PATH=$PATH:/home/flagmate/miniconda3/bin;export PATH; 
+
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export KEYTIMEOUT=1
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/flagmate/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/flagmate/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/flagmate/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/flagmate/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+conda deactivate
+# <<< conda initialize <<<
