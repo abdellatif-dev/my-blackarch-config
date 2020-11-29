@@ -68,11 +68,11 @@ termmenu = {
   { "termite", "termite" },
   { "terminator", "terminator" },
   { "xfce4 terminal", "xfce4-terminal" }, 
-  { "term (grey)", "urxvt -fg grey -depth 32 -bg rgba:0008/001B/00E5/aaaa -e bash " },
-  { "term (red)", "urxvt -fg red -depth 32 -bg rgba:0008/001B/00E5/aaaa -e bash " },
-  { "term (green)", "urxvt -fg green -depth 32 -bg rgba:0008/001B/00E5/aaaa -e bash " },
-  { "term (yellow)", "urxvt -fg yellow -depth 32 -bg rgba:0008/001B/00E5/aaaa -e bash " },
-  { "term (white)", "urxvt -fg white -depth 32 -bg rgba:0008/001B/00E5/aaaa -e bash " }
+  { "term (grey)", "urxvt -fg grey -depth 32 -bg rgba:0008/001B/00E5/aaaa -e zsh " },
+  { "term (red)", "urxvt -fg red -depth 32 -bg rgba:0008/001B/00E5/aaaa -e zsh " },
+  { "term (green)", "urxvt -fg green -depth 32 -bg rgba:0008/001B/00E5/aaaa -e zsh " },
+  { "term (yellow)", "urxvt -fg yellow -depth 32 -bg rgba:0008/001B/00E5/aaaa -e zsh " },
+  { "term (white)", "urxvt -fg white -depth 32 -bg rgba:0008/001B/00E5/aaaa -e zsh " }
 }
 
 browsermenu = {
