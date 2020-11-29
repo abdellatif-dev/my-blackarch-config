@@ -5,5 +5,22 @@ scrollbar_position = hidden
 scrollback_infinite = True
 [colors]
 foreground = #ffffff
-[colors]
-background = rgba(8, 12, 23, 0.7)
+background = #0F111A
+
+color0=       #090A0F
+color1=       #D41919
+color2=       #5E97AF
+color3=       #FAC86A
+color4=       #A574C3
+color5=       #57F199
+color6=       #505A7A
+color7=       #E9E9E9
+
+color8=       #198388
+color9=       #EC0101
+color10=      #89DDFF
+color11=      #E98567
+color12=      #B797CA
+color13=      #A9FECD
+color14=      #B2B2CC
+color15=      #A4A4A4
