@@ -88,6 +88,9 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 export MANPATH="/usr/local/man:$MANPATH"
 source ~/.config/zsh/nicoulaj.zsh-theme
 
+PROMPT="%F{10}[%B%F{7}%n%f%b%F{5}@%f%B%F{7}%m%f%b%F{10}]%f-%F{10}[%f%B%F{7}%t%f%b%F{10}]%f-%F{10}[%f%F{3}%B%1~%b%f%F{10}]%f 
+%F{10}(%h) $:%f " 
+
 # enable auto-suggestions based on the history
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
     . /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -105,20 +108,3 @@ PATH=$PATH:/home/flagmate/miniconda3/bin;export PATH;
 #[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export KEYTIMEOUT=1
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/flagmate/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/flagmate/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/flagmate/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/flagmate/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-
-conda deactivate
-# <<< conda initialize <<<
