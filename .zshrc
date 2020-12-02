@@ -89,7 +89,7 @@ export MANPATH="/usr/local/man:$MANPATH"
 source ~/.config/zsh/nicoulaj.zsh-theme
 
 PROMPT="%F{10}[%B%F{7}%n%f%b%F{5}@%f%B%F{7}%m%f%b%F{10}]%f-%F{10}[%f%B%F{7}%t%f%b%F{10}]%f-%F{10}[%f%F{3}%B%1~%b%f%F{10}]%f 
-%F{10}(%h) $:%f " 
+%F{10}[%B%F{7}%h%f%b%F{10}|%B%F{7}%?%f%b%F{10}]%f-%F{3}%B$%b%f: "
 
 # enable auto-suggestions based on the history
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
@@ -106,5 +106,3 @@ PATH=$PATH:/home/flagmate/miniconda3/bin;export PATH;
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 #[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-export KEYTIMEOUT=1
