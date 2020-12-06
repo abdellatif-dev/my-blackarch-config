@@ -1,0 +1,103 @@
+# Which is equivalent to
+format = """
+$username\
+$hostname\
+$shlvl\
+$kubernetes\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$hg_branch\
+$docker_context\
+$package\
+$cmake\
+$dart\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$golang\
+$helm\
+$java\
+$julia\
+$nim\
+$nodejs\
+$ocaml\
+$perl\
+$php\
+$purescript\
+$python\
+$ruby\
+$rust\
+$swift\
+$terraform\
+$zig\
+$nix_shell\
+$conda\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$env_var\
+$crystal\
+$custom\
+$cmd_duration\
+$line_break\
+$lua\
+$jobs\
+$battery\
+$time\
+$status\
+$character"""
+
+[directory]
+truncation_length = 1
+truncation_symbol = ""
+
+[dotnet]
+symbol = " "
+style = "green"
+heuristic = false
+
+[git_commit]
+commit_hash_length = 4
+tag_symbol = "🔖 "
+
+[lua]
+format = "via [ $version](bold blue) "
+
+[dart]
+format = "via [ $version](bold red) "
+
+[docker_context]
+format = "via [ $context](blue bold)"
+
+[golang]
+format = "via [ﳑ $version](bold cyan) "
+
+[hostname]
+ssh_only = false
+format =  "on [$hostname](bold red) "
+trim_at = ".companyname.com"
+disabled = false
+
+[java]
+symbol = " "
+
+[perl]
+format = "via [ $version]($style) "
+
+[php]
+format = "via [ $version](147 bold) "
+
+[python]
+format = "via [ $version](147 bold) "
+
+[ruby]
+symbol = " "
+
+[conda]
+format = "[$symbol$environment](dimmed green) "
+
