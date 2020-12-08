@@ -72,7 +72,7 @@ termmenu = {
   { "term (red)", "urxvt -fg red -depth 32 -bg rgba:0008/001B/00E5/aaaa -e zsh " },
   { "term (green)", "urxvt -fg green -depth 32 -bg rgba:0008/001B/00E5/aaaa -e zsh " },
   { "term (yellow)", "urxvt -fg yellow -depth 32 -bg rgba:0008/001B/00E5/aaaa -e zsh " },
-  { "term (white)", "urxvt -fg white -depth 32 -bg rgba:0008/001B/00E5/aaaa -e zsh " }
+  { "term (white)", "urxvt -fg white -depth 32 -bg rgba:0008/001B/00E5/aaaa -e zshh " }
 }
 
 browsermenu = {

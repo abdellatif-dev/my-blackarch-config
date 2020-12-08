@@ -9,7 +9,7 @@ local gfs = require("gears.filesystem")
 local themes_path = gfs.get_themes_dir()
 theme = {}
 
-theme.useless_gap   = dpi(5)
+-- theme.useless_gap   = dpi(5)
 theme.border_width  = dpi(3)
 
 theme.font          = "Hack Nerd Font 12"

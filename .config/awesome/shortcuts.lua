@@ -72,7 +72,7 @@ globalkeys = gears.table.join(
     awful.key({ modkey,  }, "a", function () awful.util.spawn("alacritty") end,
             {description = "open alacritty", group = "a software"}),
             
-    awful.key({ modkey,  }, "t", function () awful.util.spawn("xfce4-terminal") end,
+    awful.key({ modkey, }, "t", function () awful.util.spawn("xfce4-terminal") end,
             {description = "open xfce4-terminal", group = "a software"}),
 
     awful.key({ modkey, }, "o", function () awful.util.spawn("libreoffice") end,
@@ -115,7 +115,7 @@ globalkeys = gears.table.join(
 
 
 
-    awful.key({ modkey, "Shift"   }, "t", function () awful.util.spawn("termite") end,
+    awful.key({ modkey, "Shift" }, "t", function () awful.util.spawn("termite") end,
               {description = "launch termite", group = "a software"}),
     awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
               {description = "select next", group = "layout"}),

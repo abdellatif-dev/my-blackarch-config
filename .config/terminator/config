@@ -44,7 +44,8 @@
   reset_clear = <Primary><Alt>c
   group_all = <Primary>a
   ungroup_all = <Primary>u
-  group_tab = <Primary><Shift>a
+  group_tab = Alt_R
+  group_tab_toggle = <Primary><Shift>a
   ungroup_tab = <Primary>t
   new_terminator = <Primary><Shift>n
   broadcast_off = <Primary><Alt>g
@@ -59,7 +60,7 @@
     background_type = transparent
     cursor_color = "#babdb6"
     cursor_color_fg = False
-    font = Hack Nerd Font 12
+    font = Hack Nerd Font 14
     foreground_color = "#ffffff"
     scrollbar_position = hidden
     scroll_on_keystroke = False

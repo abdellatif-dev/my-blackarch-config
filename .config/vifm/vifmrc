@@ -479,5 +479,6 @@ nnoremap .s :sync<cr>
 nnoremap .S :sync %c<cr>
 " Swap panes
 nnoremap <c-u> <c-w>x
-" quit shortcut
+
+" to quit
 nnoremap .q :x<CR>
