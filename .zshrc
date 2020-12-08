@@ -8,8 +8,8 @@ bindkey "^[[3~" delete-char
 bindkey '^[[H' beginning-of-line
 bindkey '^[[F' end-of-line
 
-bindkey '^[[5' beginning-of-line
-bindkey '^[[6' end-of-line
+bindkey '^[[5~' beginning-of-line
+bindkey '^[[6~' end-of-line
 
 export EDITOR='vim'
 setopt autocd            
