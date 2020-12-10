@@ -25,7 +25,7 @@ printf "\n"
 
 updateconf="--noconfirm"
 installconfirm="--needed --noconfirm"
-extra="rofi lxappearance keyscreen breeze breeze-icons dmenu thunar xarchiver bat"
+extra="rofi lxappearance keyscreen breeze breeze-icons thunar xarchiver bat"
 
 printf "Update packages[Y/n]: "
 read -r confirm
@@ -122,6 +122,21 @@ esac
 
 printf "\n"
 sleep 1
+
+
+printf "install extra  [Y/n]: "
+read -r stconfirm
+case $stconfirm in
+   "y") echo "installing extra " && yay -S dmenu-abdellatif $noconfirm\
+        && yay -S brave-bin $noconfirm;;
+   "Y") echo "installing extra " && yay -S dmenu-abdellatif $noconfirm\
+        && yay -S brave-bin $noconfirm;;
+     *) echo "skipping";;
+esac
+
+printf "\n"
+sleep 1
+
 
 printf "install extra  [Y/n]: "
 read -r stconfirm

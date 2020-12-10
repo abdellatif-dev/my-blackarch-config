@@ -23,6 +23,7 @@ awful.rules.rules = {
     { rule = { instance = "brave" }, properties = { tag = " " } },
     { rule = { instance = "chromium" }, properties = { tag = " " } },
     { rule = { class = "firefox" }, properties = { tag = " " } },
+    { rule = { class = "surf" }, properties = { tag = " " } },
     
     { rule = { instance = "terminator" }, properties = { tag = " " } },
     { rule = { instance = "xfce4-terminal" }, properties = { tag = " " } },

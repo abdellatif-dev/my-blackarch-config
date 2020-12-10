@@ -78,6 +78,10 @@ globalkeys = gears.table.join(
     awful.key({ modkey, }, "o", function () awful.util.spawn("libreoffice") end,
               {description = "open libreoffice", group = "a software"}),
 
+
+    awful.key({ modkey, }, "d", function () awful.util.spawn("dmenu_run") end,
+            {description = "open dmenu_run", group = "a software"}),
+
     awful.key({ modkey, "Control"  }, "d", function () awful.util.spawn("kdenlive") end,
               {description = "open kdenlive", group = "a software"}),
 

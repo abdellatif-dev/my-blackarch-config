@@ -20,9 +20,9 @@
    |![pics/3.png](pics/3.png)|![pics/4.png](pics/4.png)|![pics/5.png](pics/5.png)|
    
 
-  |          Run menu                                   |
-  |:---------------------------------------------------:|
-  | ![pics/6.png](pics/6.png) ![pics/7.png](pics/7.png) |
+  |           Run menu        |   Run menu fullscreen   |     dmenu-abdellatif     |
+  |:-------------------------:|:-----------------------:|:------------------------:|
+  | ![pics/6.png](pics/6.png) |![pics/7.png](pics/7.png)| ![pics/6.png](pics/9.png)|
  
 # todo 
 -----------------------------------------------
@@ -31,6 +31,8 @@
 - [X] polybar
 
 - [X] screenshots
+
+- [X] dmenu my costume build
 
 - [ ] make a script to auto installation
 
@@ -86,7 +88,7 @@
 
   - [X] brave 
   
-  - [X] dmenu
+  - [X] dmenu my build
 
   - [X] obs or simplescreenrecorder
 

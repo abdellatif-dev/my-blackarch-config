@@ -1,8 +1,0 @@
-#!/bin/python3
-
-from password_generator import PasswordGenerator
-
-pwo = PasswordGenerator()
-
-pwo.excludeschars = "!$%_&(){}[].,*+-/?^<=>" 
-print(pwo.generate())
