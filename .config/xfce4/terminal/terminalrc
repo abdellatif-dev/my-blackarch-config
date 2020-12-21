@@ -34,12 +34,11 @@ ScrollingBar=TERMINAL_SCROLLBAR_NONE
 TextBlinkMode=TERMINAL_TEXT_BLINK_MODE_FOCUSED
 ScrollingUnlimited=TRUE
 TitleMode=TERMINAL_TITLE_HIDE
-FontName=FiraCode Nerd Font weight=450 10
+FontName=FiraCode Nerd Font weight=450 14
 ColorPalette=rgb(9,10,15);rgb(212,25,25);rgb(94,151,175);rgb(250,200,106);rgb(165,116,195);rgb(87,241,153);rgb(80,90,122);rgb(233,233,233);rgb(25,131,136);rgb(236,1,1);rgb(137,221,255);rgb(233,133,103);rgb(183,151,202);rgb(169,254,205);rgb(178,178,204);rgb(164,164,164)
 ColorBackground=#0f0d11101a1a
 CustomCommand=bash
-FontUseSystem=TRUE
-BackgroundMode=TERMINAL_BACKGROUND_IMAGE
+BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
 BackgroundImageFile=/home/flagmate/Pictures/wallpaper-NINJARCH.png
 BackgroundImageStyle=TERMINAL_BACKGROUND_STYLE_SCALED
 

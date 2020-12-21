@@ -5,7 +5,6 @@ require("awful.autofocus")
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Notification library
-
 local menubar = require("menubar")
 
 require("shortcuts")

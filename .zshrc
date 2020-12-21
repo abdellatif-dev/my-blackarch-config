@@ -1,3 +1,12 @@
+export ZSH="/home/flagmate/.oh-my-zsh"
+
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
+export ARCHFLAGS="-arch x86_64"
+
+alias zshconfig="mate ~/.zshrc"
+alias ohmyzsh="mate ~/.oh-my-zsh"
+
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -5,11 +14,15 @@ fi
 export MANPATH="/usr/local/man:$MANPATH"
 
 bindkey "^[[3~" delete-char
+
 bindkey '^[[H' beginning-of-line
 bindkey '^[[F' end-of-line
 
-bindkey '^[[5~' beginning-of-line
-bindkey '^[[6~' end-of-line
+# History in cache directory:
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.cache/zshhistory
+setopt appendhistory
 
 export EDITOR='vim'
 setopt autocd            
@@ -20,12 +33,44 @@ setopt nonomatch
 setopt notify             
 setopt numericglobsort   
 
+# Custom ZSH Binds
+bindkey '^ ' autosuggest-accept
+
 autoload -U colors && colors
+# Custom ZSH Binds
+bindkey '^ ' autosuggest-accept
+
 autoload edit-command-line; zle -N edit-command-line
-bindkey '^e' edit-command-line
+bindkey '^E' edit-command-line
 
 # vi mode
 bindkey -v
+
+# # usage: ex <file>
+ex ()
+{
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.tar.xz)    tar xJf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1     ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *)           echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
+
 
 # Basic auto/tab complete:
 autoload -U compinit
@@ -37,9 +82,6 @@ bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
-
-# Custom ZSH Binds
-bindkey '^ ' autosuggest-accept
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 source /usr/share/autojump/autojump.zsh 2>/dev/null

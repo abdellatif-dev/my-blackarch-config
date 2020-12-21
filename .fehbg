@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-scale '/usr/share/blackarch/wallpaper.jpg' 

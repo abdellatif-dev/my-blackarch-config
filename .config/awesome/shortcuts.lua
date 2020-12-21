@@ -66,17 +66,21 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Control" }, "t", function () awful.spawn(terminal) end,
             {description = "open terminator", group = "a software"}),
 
+    awful.key({ modkey,  }, "b", function () awful.util.spawn("blueberry") end,
+            {description = "open blueberry", group = "a software"}),
+
+
     awful.key({ modkey,  }, "p", function () awful.util.spawn("passmenu") end,
-            {description = "open pass", group = "a software"}),
+            {description = "open passmenu", group = "a software"}),
 
     awful.key({ modkey,  }, "a", function () awful.util.spawn("alacritty") end,
             {description = "open alacritty", group = "a software"}),
             
-    awful.key({ modkey, }, "t", function () awful.util.spawn("xfce4-terminal") end,
+    awful.key({ modkey,"Shift"  }, "t", function () awful.util.spawn("xfce4-terminal") end,
             {description = "open xfce4-terminal", group = "a software"}),
 
-    awful.key({ modkey, }, "o", function () awful.util.spawn("libreoffice") end,
-              {description = "open libreoffice", group = "a software"}),
+    -- awful.key({ modkey, }, "o", function () awful.util.spawn("libreoffice") end,
+    --           {description = "open libreoffice", group = "a software"}),
 
 
     awful.key({ modkey, }, "d", function () awful.util.spawn("dmenu_run") end,
@@ -89,7 +93,7 @@ globalkeys = gears.table.join(
               {description = "open discord", group = "a software"}),
 
     awful.key({ modkey, "Control" }, "a", function () awful.util.spawn("pavucontrol") end,
-              {description = "openp avucontrol", group = "a script"}),
+              {description = "open pavucontrol", group = "a script"}),
 
     awful.key({ modkey,  }, "0", function () awful.util.spawn("i3lock -i Pictures/1st-slider.png") end,
               {description = "i3lock", group = "a software"}),
@@ -119,7 +123,7 @@ globalkeys = gears.table.join(
 
 
 
-    awful.key({ modkey, "Shift" }, "t", function () awful.util.spawn("termite") end,
+    awful.key({ modkey, }, "t", function () awful.util.spawn("termite") end,
               {description = "launch termite", group = "a software"}),
     awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
               {description = "select next", group = "layout"}),
@@ -148,8 +152,8 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Control" }, "m",  function () awful.util.spawn("/home/flagmate/.config/awesome/scripts/mail") end,
               {description = "run mutt", group = "a script"}),
 
-    awful.key({ modkey, "Shift" }, "v",  function () awful.util.spawn("/home/flagmate/.config/awesome/scripts/vim") end,
-              {description = "run vim", group = "a script"}),
+    awful.key({ modkey, "Shift" }, "v",  function () awful.util.spawn("gvim") end,
+              {description = "run vim", group = "a software"}),
 
     awful.key({ modkey, "Shift" }, "f",  function () awful.util.spawn("/home/flagmate/.config/awesome/scripts/vifm") end,
               {description = "run vifm", group = "a script"}),

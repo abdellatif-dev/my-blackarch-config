@@ -3,6 +3,8 @@ require("awful.autofocus")
 local beautiful = require("beautiful")
 local gears = require("gears")
 
+beautiful.useless_gap   = 0.5
+
 beautiful.bg_normal     = "#090A0F"
 beautiful.bg_focus      = "#090A0F"
 beautiful.bg_urgent     = "#D41919"
@@ -15,8 +17,8 @@ beautiful.fg_urgent     = "#090A0F"
 beautiful.fg_minimize   = "#FAC86A"
 
 
-beautiful.border_width  = 1
-beautiful.border_normal = "#57F199"
+beautiful.border_width  = 3
+beautiful.border_normal = "#e98567"
 beautiful.border_focus  = "#89DDFF"
 beautiful.border_marked = "#EC0101"
 
