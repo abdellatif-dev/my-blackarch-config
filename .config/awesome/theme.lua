@@ -13,10 +13,10 @@ theme.useless_gap   = dpi(0.5)
 
 theme.font          = "Hack Nerd Font 12"
 
-theme.bg_normal     = "#090A0F"
-theme.bg_focus      = "#090A0F"
-theme.bg_urgent     = "#D41919"
-theme.bg_minimize   = "#0F333F"
+theme.bg_normal     = "#090A0F00"
+theme.bg_focus      = "#090A0F00"
+theme.bg_urgent     = "#D4191980"
+theme.bg_minimize   = "#AAAAAA70"
 theme.bg_systray    = theme.bg_normal
 
 theme.fg_normal     = "#AAAAAA"

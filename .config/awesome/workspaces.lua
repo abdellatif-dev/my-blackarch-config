@@ -5,10 +5,10 @@ local gears = require("gears")
 
 beautiful.useless_gap   = 0.5
 
-beautiful.bg_normal     = "#090A0F"
-beautiful.bg_focus      = "#090A0F"
-beautiful.bg_urgent     = "#D41919"
-beautiful.bg_minimize   = "#0F333F"
+beautiful.bg_normal     = "#090A0F05"
+beautiful.bg_focus      = "#090A0F00"
+beautiful.bg_urgent     = "#D4191980"
+beautiful.bg_minimize   = "#AAAAAA70"
 beautiful.bg_systray    = beautiful.bg_normal
 
 beautiful.fg_normal     = "#AAAAAA"
