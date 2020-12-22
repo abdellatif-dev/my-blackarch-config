@@ -26,7 +26,7 @@ printf "\n"
 updateconf="--noconfirm"
 installconfirm="--needed --noconfirm"
 extra="rofi lxappearance keyscreen breeze breeze-icons thunar xarchiver bat"
-
+aurstuff="polybar dmenu-abdellatif brave-bin diff-so-fancy picom-jonaburg-git"
 printf "Update packages[Y/n]: "
 read -r confirm
 case $confirm in
@@ -97,40 +97,11 @@ sleep 1
 printf "\n"
 
 
-printf "install polybar[Y/n]: "
-read -r polybarconfirm
-case $polybarconfirm in
-   "y") echo "installing polybar" &&yay -S polybar $installconfirm;;
-   "Y") echo "installing polybar" &&yay -S polybar $installconfirm;;
-     *) echo "skipping";;
-esac
-
-printf "\n"
-sleep 1
-
-printf "install st terminal [Y/n]: "
-read -r stconfirm
-case $stconfirm in
-   "y") echo "installing st terminal" && git clone https://github.com/abdellatif-dev/st.git\
-         && cd st\
-         && sudo make clean install 2>/dev/null && make man 2>/dev/null 1>/dev/null;;
-   "Y") echo "installing st terminal" && git clone https://github.com/abdellatif-dev/st.git\
-         && cd st\
-         && sudo make clean install 2>/dev/null && make man 2>/dev/null 1>/dev/null;;
-     *) echo "skipping";;
-esac
-
-printf "\n"
-sleep 1
-
-
-printf "install extra  [Y/n]: "
-read -r stconfirm
-case $stconfirm in
-   "y") echo "installing extra " && yay -S dmenu-abdellatif $noconfirm\
-        && yay -S brave-bin $noconfirm;;
-   "Y") echo "installing extra " && yay -S dmenu-abdellatif $noconfirm\
-        && yay -S brave-bin $noconfirm;;
+printf "install aur packages[Y/n]: "
+read -r aurconfirm
+case $aurconfirm in
+   "y") echo "installing aur packages" &&yay -S $aurstuff $installconfirm;;
+   "Y") echo "installing aur packages" &&yay -S $aurstuff $installconfirm;;
      *) echo "skipping";;
 esac
 
