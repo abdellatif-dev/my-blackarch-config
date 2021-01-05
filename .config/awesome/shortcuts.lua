@@ -86,8 +86,8 @@ globalkeys = gears.table.join(
     awful.key({ modkey, }, "d", function () awful.util.spawn("dmenu_run") end,
             {description = "open dmenu_run", group = "a software"}),
 
-    awful.key({ modkey, "Control"  }, "d", function () awful.util.spawn("kdenlive") end,
-              {description = "open kdenlive", group = "a software"}),
+    awful.key({ modkey,  "Control" }, "d", function () awful.util.spawn("dmenu_man") end,
+            {description = "open dmenu_man", group = "a software"}),
 
     awful.key({ modkey, "Shift"  }, "d", function () awful.util.spawn("discord") end,
               {description = "open discord", group = "a software"}),
@@ -103,6 +103,9 @@ globalkeys = gears.table.join(
     
     awful.key({ modkey, "Control" }, "s", function () awful.util.spawn("simplescreenrecorder") end,
               {description = "simplescreenrecorder", group = "a software"}),
+
+    awful.key({ modkey, "Control" }, "e", function () awful.util.spawn("emacs") end,
+              {description = "emacs", group = "a software"}),
 
     awful.key({ modkey, }, "x", function () awful.util.spawn("lxappearance") end,
               {description = "appearance", group = "a software"}),
