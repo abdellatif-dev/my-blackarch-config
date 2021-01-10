@@ -11,18 +11,17 @@
 -----------------------------------------------
 
 
-  |mod4+shift+w or right click menu|        desktop          |screenkey for creators    |
-  |:------------------------------:|:-----------------------:|:------------------------:|
-  |![pics/2.png](pics/2.png)       |![pics/1.png](pics/1.png)|![pics/8.png](pics/8.png) |
-
-   |        layout1          |        layout2          |        layout3          |
-   |:-----------------------:|:-----------------------:|:-----------------------:|
-   |![pics/3.png](pics/3.png)|![pics/4.png](pics/4.png)|![pics/5.png](pics/5.png)|
-   
-
-  |           Run menu        |   Run menu fullscreen   |     dmenu-abdellatif     |
-  |:-------------------------:|:-----------------------:|:------------------------:|
-  | ![pics/6.png](pics/6.png) |![pics/7.png](pics/7.png)| ![pics/6.png](pics/9.png)|
+  | desktop                   | mod4+shift+w or right click menu | screenkey for creators    |
+  |:-------------------------:|:--------------------------------:|:-------------------------:|
+  | ![pics/1.png](pics/1.png) | ![pics/2.png](pics/2.png)        | ![pics/8.png](pics/8.png) |
+  |:-------------------------:|:--------------------------------:|:-------------------------:|
+  | layout                    | compton (picom)                  | emacs-config              |
+  |:-------------------------:|:--------------------------------:|:-------------------------:|
+  | ![pics/3.png](pics/3.png) | ![pics/4.png](pics/4.png)        | ![pics/5.png](pics/5.png) |
+  |:-------------------------:|:--------------------------------:|:-------------------------:|
+  | Run menu                  | Run menu fullscreen              | dmenu-abdellatif          |
+  |:-------------------------:|:--------------------------------:|:-------------------------:|
+  | ![pics/6.png](pics/6.png) | ![pics/7.png](pics/7.png)        | ![pics/6.png](pics/9.png) |
  
 # todo 
 -----------------------------------------------
@@ -34,7 +33,7 @@
 
 - [X] dmenu my costume build
 
-- [ ] make a script to auto installation
+- [x] make a script to auto installation
 
 # installation script
 ================================================
@@ -91,31 +90,5 @@
   - [X] dmenu my build
 
   - [X] obs or simplescreenrecorder
-
-* config
-
-  - [ ]  awesome config
-
-  - [ ]  polybar confign 
-
-  - [ ] zsh
-
-  - [ ] bash
-
-  - [ ] Vifm
-
-  - [ ] vim
-
-  - [ ] neovim
-
-  - [ ] neomutt
-
-  - [ ] termintator
-
-  - [ ] termite
-
-  - [ ] xfce4 terminal
-
-  - [ ] neoftech
-
-  - [ ] cp scripts to ~/scripts/ 
+  
+  - [x] emacs

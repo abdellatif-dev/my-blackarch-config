@@ -1,7 +1,10 @@
 [global_config]
   dbus = False
-  tab_position = hidden
+  geometry_hinting = True
+  broadcast_default = off
+  scroll_tabbar = True
   title_transmit_bg_color = "#0f111a"
+  title_receive_fg_color = "#000000"
   title_inactive_bg_color = "#242832"
   enabled_plugins = TerminalShot,
   suppress_multiple_term_dialog = True
@@ -56,11 +59,11 @@
   [[default]]
     audible_bell = True
     urgent_bell = True
-    background_darkness = 0.7
+    background_darkness = 0.0
     background_type = transparent
     cursor_color = "#babdb6"
     cursor_color_fg = False
-    font = Hack Nerd Font 14
+    font = Hack Nerd Font 10
     foreground_color = "#ffffff"
     scrollbar_position = hidden
     scroll_on_keystroke = False
@@ -71,38 +74,8 @@
     use_system_font = False
     rewrap_on_resize = False
   [[flagmate]]
-    audible_bell = True
-    urgent_bell = True
-    background_color = "#080c17"
-    background_darkness = 0.7
-    background_type = transparent
-    cursor_color = "#aaaaaa"
-    font = Hack Nerd Font 12
-    foreground_color = "#ffffff"
-    scrollbar_position = hidden
-    scrollback_infinite = True
-    palette = "#080c17:#aa0000:#08bf0d:#ed613e:#198388:#16e3a1:#edd400:#aaaaaa:#204a87:#ff5555:#58b444:#1137b8:#5555ff:#3fbabf:#fce94f:#ffffff"
-    custom_command = figlet flagmate
-    use_system_font = False
-    rewrap_on_resize = False
-  [[powershell]]
-    audible_bell = True
-    urgent_bell = True
-    background_color = "#000551"
-    background_darkness = 0.7
-    background_type = transparent
-    cursor_shape = underline
-    cursor_color = "#aaaaaa"
-    font = Hack Nerd Font 12
-    foreground_color = "#eeeeec"
-    scrollbar_position = hidden
-    scrollback_infinite = True
-    palette = "#000551:#204a87:#4e9a06:#b82d2f:#e98567:#f57e04:#d3d7cf:#eeeeec:#888a85:#cc0000:#73d216:#babdb6:#3465a4:#f48f28:#55ffff:#babdb6"
-    use_system_font = False
-    rewrap_on_resize = False
-  [[vim]]
     background_color = "#0f111a"
-    background_darkness = 0.7
+    background_darkness = 0.0
     background_type = transparent
     cursor_color = "#aaaaaa"
     font = Hack Nerd Font 12
@@ -113,6 +86,76 @@
     custom_command = vim .
     use_system_font = False
     rewrap_on_resize = False
+  [[vim]]
+    background_color = "#0f111a"
+    background_darkness = 0.0
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = Hack Nerd Font 12
+    foreground_color = "#ffffff"
+    scrollbar_position = hidden
+    scrollback_infinite = True
+    palette = "#0f111a:#d41919:#799eec:#e98567:#3fbfbd:#7f5f98:#c4c4cb:#bbbbbb:#198388:#ec0101:#89ddff:#fac86a:#16e3a1:#c590e7:#31333a:#000000"
+    use_custom_command = True
+    custom_command = vim .
+    use_system_font = False
+    rewrap_on_resize = False
+  [[python]]
+    background_color = "#0f0f0f"
+    background_darkness = 0.0
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = Hack Nerd Font 12
+    foreground_color = "#f5c211"
+    scrollbar_position = hidden
+    scrollback_infinite = True
+    palette = "#0f111a:#d41919:#799eec:#e98567:#3fbfbd:#7f5f98:#c4c4cb:#bbbbbb:#198388:#ec0101:#89ddff:#fac86a:#16e3a1:#c590e7:#31333a:#000000"
+    use_custom_command = True
+    custom_command = /usr/bin/python3 -s
+    use_system_font = False
+    rewrap_on_resize = False
+  [[zsh]]
+    background_color = "#0f111a"
+    background_darkness = 0.0
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = Hack Nerd Font 12
+    foreground_color = "#26a269"
+    scrollbar_position = hidden
+    scrollback_infinite = True
+    palette = "#0f111a:#d41919:#799eec:#e98567:#3fbfbd:#7f5f98:#c4c4cb:#bbbbbb:#198388:#ec0101:#89ddff:#fac86a:#16e3a1:#c590e7:#31333a:#000000"
+    use_custom_command = True
+    custom_command = /usr/bin/zsh
+    use_system_font = False
+    rewrap_on_resize = False
+  [[fish]]
+    background_color = "#0f111a"
+    background_darkness = 0.0
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = Hack Nerd Font 12
+    foreground_color = "#1a5fb4"
+    scrollbar_position = hidden
+    scrollback_infinite = True
+    palette = "#0f111a:#d41919:#799eec:#e98567:#3fbfbd:#7f5f98:#c4c4cb:#bbbbbb:#198388:#ec0101:#89ddff:#fac86a:#16e3a1:#c590e7:#31333a:#000000"
+    use_custom_command = True
+    custom_command = /usr/bin/fish
+    use_system_font = False
+    rewrap_on_resize = False
+  [[vifm]]
+    background_color = "#0f111a"
+    background_darkness = 0.0
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = Hack Nerd Font 12
+    foreground_color = "#ffffff"
+    scrollbar_position = hidden
+    scrollback_infinite = True
+    palette = "#0f111a:#d41919:#799eec:#e98567:#3fbfbd:#7f5f98:#c4c4cb:#bbbbbb:#198388:#ec0101:#89ddff:#fac86a:#16e3a1:#c590e7:#31333a:#000000"
+    use_custom_command = True
+    custom_command = vifm .
+    use_system_font = False
+    rewrap_on_resize = False
 [layouts]
   [[default]]
     [[[window0]]]
@@ -121,5 +164,5 @@
     [[[child1]]]
       type = Terminal
       parent = window0
-      profile = vim
+      profile = flagmate
 [plugins]

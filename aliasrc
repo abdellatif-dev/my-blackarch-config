@@ -5,13 +5,13 @@ alias wifi='ifconfig wlan0'
 alias cl='reset'
 alias rt='rm * -rf'
 alias ip='ip -color=auto'
+alias rwlp='feh --no-fehbg --randomize --bg-scale Pictures/*'
 alias diff='diff --color=auto'
 # ls 
 alias la='lsd -a'  
 alias lla='lsd -la' 
 alias ll='lsd -l'   
 alias ls='lsd'
-
 alias cat='bat --theme TwoDark'
 alias sd='doas'
 alias rmdir='rm -rvdf'
@@ -24,6 +24,7 @@ alias wget="wget -U 'noleak'"
 alias curl="curl --user-agent 'noleak'"
 alias grep='grep --color'
 alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS} '
+alias gitdiff='git diff --color | diff-so-fancy'
 alias clh="history -c;reset"
 alias sthelp='cat ~/.config/st/man.md'
 alias rm='rm -iv'
@@ -39,27 +40,4 @@ alias shinedown="cd ~/Music/shinedown/"
 alias live="cd ~/Music/live/"
 alias music="cd ~/Music/"
 
-# # usage: ex <file>
-ex ()
-{
-  if [ -f $1 ] ; then
-    case $1 in
-      *.tar.bz2)   tar xjf $1   ;;
-      *.tar.gz)    tar xzf $1   ;;
-      *.tar.xz)    tar xJf $1   ;;
-      *.bz2)       bunzip2 $1   ;;
-      *.rar)       unrar x $1     ;;
-      *.gz)        gunzip $1    ;;
-      *.tar)       tar xf $1    ;;
-      *.tbz2)      tar xjf $1   ;;
-      *.tgz)       tar xzf $1   ;;
-      *.zip)       unzip $1     ;;
-      *.Z)         uncompress $1;;
-      *.7z)        7z x $1      ;;
-      *)           echo "'$1' cannot be extracted via ex()" ;;
-    esac
-  else
-    echo "'$1' is not a valid file"
-  fi
-}
 

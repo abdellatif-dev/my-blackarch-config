@@ -50,11 +50,11 @@ esac
 sleep 1
 printf "\n"
 
-printf "install vim[Y/n]: "
+printf "install vim and emacs[Y/n]: "
 read -r vimconfrim
 case $vimconfrim in
-   "y") echo "installing vim" &&sudo pacman -S vim neovim vifm $installconfirm;;
-   "Y") echo "installing vim" &&sudo pacman -S vim neovim vifm $installconfirm;;
+   "y") echo "installing vim and emacs" &&sudo pacman -S vim neovim vifm emacs $installconfirm;;
+   "Y") echo "installing vim and emacs" &&sudo pacman -S vim neovim vifm emacs $installconfirm;;
      *) echo "skipping";;
 esac
 
