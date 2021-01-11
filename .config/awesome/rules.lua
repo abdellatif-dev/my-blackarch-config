@@ -41,6 +41,7 @@ awful.rules.rules = {
     
     { rule = { instance = "nemo" }, properties = { tag = " " } },
     { rule = { instance = "thunar" }, properties = { tag = " " } },
+    { rule = { instance = "pcmanfm" }, properties = { tag = " " } },
 
     { rule = { instance = "libreoffice" }, properties = { tag = " " } },
     { rule = { instance = "gimp" }, properties = { tag = " " } },

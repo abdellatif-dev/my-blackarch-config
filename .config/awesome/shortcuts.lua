@@ -171,8 +171,8 @@ globalkeys = gears.table.join(
               {description = "stop screenkey", group = "a software"}),
 
 
-    awful.key({ modkey, "Control" }, "f",     function () awful.util.spawn("thunar") end,
-              {description = "run thunar", group = "a software"}),
+    awful.key({ modkey, "Control" }, "f",     function () awful.util.spawn("pcmanfm") end,
+              {description = "run pcmanfm", group = "a software"}),
 
     awful.key({ modkey , "Control" }, "b",     function () awful.util.spawn("brave") end,
               {description = "run brave", group = "a software"}),

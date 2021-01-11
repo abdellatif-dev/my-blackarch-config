@@ -3,7 +3,7 @@ require("awful.autofocus")
 local beautiful = require("beautiful")
 local gears = require("gears")
 
-beautiful.useless_gap   = 0.5
+beautiful.useless_gap   = 5
 
 beautiful.bg_normal     = "#090A0F05"
 beautiful.bg_focus      = "#090A0F00"
