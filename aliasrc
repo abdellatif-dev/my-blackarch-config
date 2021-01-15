@@ -5,8 +5,8 @@ alias wifi='ifconfig wlan0'
 alias cl='reset'
 alias rt='rm * -rf'
 alias ip='ip -color=auto'
-alias rwlp='feh --no-fehbg --randomize --bg-scale Pictures/*'
 alias diff='diff --color=auto'
+alias wallpaper='feh --randomize --bg-scale ~/Pictures/*'
 # ls 
 alias la='lsd -a'  
 alias lla='lsd -la' 
@@ -39,5 +39,5 @@ alias scripts="cd ~/scripts"
 alias shinedown="cd ~/Music/shinedown/"
 alias live="cd ~/Music/live/"
 alias music="cd ~/Music/"
-
+alias btw="echo 'I use Arch linux'" 
 

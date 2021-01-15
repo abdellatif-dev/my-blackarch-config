@@ -1,25 +1,33 @@
 # colors
 darkgrey="$(tput bold ; tput setaf 0)"
 white="$(tput bold ; tput setaf 7)"
-red="$(tput bold ; tput setaf 4)"
 blue="$(tput bold; tput setaf 4)"
 cyan="$(tput bold; tput setaf 6)"
 nc="$(tput sgr0)"
 
 # exports
+export PATH="${HOME}/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:"
+export PATH="${PATH}/usr/local/sbin:/opt/bin:/usr/bin/core_perl:/usr/games/bin:"
+
+if [[ $EUID -eq 0 ]]; then
+  export PS1="\[$blue\][ \[$cyan\]\H \[$darkgrey\]\w\[$darkgrey\] \[$blue\]]\\[$darkgrey\]# \[$nc\]"
+else
+  export PS1="\[$blue\][ \[$cyan\]\H \[$darkgrey\]\w\[$darkgrey\] \[$blue\]]\\[$cyan\]\$ \[$nc\]"
+fi
+
+export LD_PRELOAD=""
 export EDITOR="vim"
 
-
-source $HOME/aliasrc
-PATH=$PATH:/home/flagmate/.tools/010editor;export PATH; 
-PATH=$PATH:/home/flagmate/scripts/;export PATH; 
-PATH=$PATH:/home/flagmate/.tools/myscripts;export PATH; 
+# alias
+alias ls="ls --color"
+alias vi="vim"
+alias shred="shred -zf"
+#alias python="python2"
+alias wget="wget -U 'noleak'"
+alias curl="curl --user-agent 'noleak'"
 
 # source files
-
 [ -r /usr/share/bash-completion/completions ] &&
   . /usr/share/bash-completion/completions/*
 
-PATH=$PATH:/home/flagmate/.tools/010editor;export PATH; # ADDED BY INSTALLER - DO NOT EDIT OR DELETE THIS COMMENT - 87FF8EFC-483D-BCAA-D67D-735CF60410D1 70E93305-2946-284C-994C-C8410CE09AA7
-
-eval "$(starship init bash)"
+source /home/flagmate/aliasrc
