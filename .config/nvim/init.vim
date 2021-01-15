@@ -1,61 +1,105 @@
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent execute "!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
-  autocmd VimEnter * PlugInstall | source $MYVIMRC
-endif
+" Vundle -----------------------------------------------------------------------
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-filetype on
-filetype plugin on
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'xavierd/clang_complete'
+
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'scrooloose/nerdtree-project-plugin'
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'RRethy/vim-illuminate'
+
+Plugin 'stsewd/fzf-checkout.vim'
+Plugin 'kaicataldo/material.vim', { 'branch': 'main' }
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'lambdalisue/gina.vim'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'machakann/vim-sandwich'
+Plugin 'honza/vim-snippets'
+Plugin 'mbbill/undotree'
+Plugin 'Townk/vim-autoclose'
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" coc-nvim
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+Plugin 'neoclide/coc-denite'
+call vundle#end()            " required
+" Vundle -----------------------------------------------------------------------
+
+" file type and syntax highliting on
 filetype plugin indent on
+syntax on
 
-set autoread                " autoload file changes
-set autowriteall            " autosave files
-set relativenumber
-set background=dark         " dark colorscheme
-set completeopt-=preview    " Do not show preview window for ins-completion.
-set diffopt+=vertical       " split diffopt in vertical mode
-set foldlevel=2             " sets the fold level
-set foldmethod=indent       " type of indentation
-set foldnestmax=10          " sets the maximum nesting of folds
-set gcr=a:blinkon0          " disable cursor blinking
-set guioptions=             " remove all GUI components and options.
-set hidden                  " hide when switching buffers instead of unloading
-set history=1000            " store lots of :cmdline history
-set hlsearch                " highlights the string matched by the search
-set ignorecase              " make searching case insensitive
-set incsearch               " incremental search
-set nobackup                " disable backups
-set nocompatible            " use Vim settings, rather then Vi
-set nofoldenable            " when off, all folds are open when open a new file
-set noshowmode              " don't show mode as we use a status line plugin
-set noswapfile              " disable swapfile
-set nowrap                  " wrap lines
-set scrolloff=10            " keep cursor at the minimum 10 rows from the screen borders
-set showmatch               " show match brackets
-set sidescroll=1            " incrementally scroll one character
-set signcolumn=yes          " always show signcolumns
-set smartcase               " unless the query has capital letters
-set splitbelow              " open new split below
-set splitright              " open new split right
-set termguicolors           " enable True color
-set ttyfast                 " always assume a fast terminal
-set undodir=~/.vim/undo-dir " setup undo directory
-set undofile                " save undo chages even after computer restart
-set updatetime=250          " reduce update time in Vim
-set wildmenu                " visual autocomplete for command menu
-set tabstop=4 softtabstop=4 expandtab
-set shiftwidth=4
-set encoding=utf-8
-set spell
-set nowritebackup
-set exrc
-set secure
-set shortmess+=c
 
-let g:material_terminal_italics = 1
-let g:material_terminal_italics = 1
-let g:material_theme_style = 'ocean-community'
+" whitespaces
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+highlight ExtraWhitespace ctermbg=cyan guibg=cyan
+autocmd InsertLeave * redraw!
+match ExtraWhitespace /\s\+$\| \+\ze\t/
+autocmd BufWritePre * :%s/\s\+$//e
 
-colorscheme material
+let NERDTreeHijackNetrw=1
+let NERDTreeShowHidden=1
+
+function! ToggleNERDTree()
+ NERDTreeToggle
+  silent NERDTreeMirror
+endfunction
+" sessions
+let mapleader = "\<Space>"
+noremap <F1> :mksession! .vim.session <cr>
+noremap <F2> :source .vim.session <cr>
+noremap <F3> :! rm .vim.session <cr>
+
+nnoremap <C-k> :resize +2<CR>
+nnoremap <C-j> :resize -2<CR>
+nnoremap <C-h> :vertical resize +2<CR>
+nnoremap <C-l> :vertical resize -2<CR>
+nmap <leader>n :call ToggleNERDTree()<CR>
+
+nmap <S-l> <C-w>l
+nmap <S-h> <C-w>h
+nmap <S-k> <C-w>k
+nmap <S-j> <c-w>j
+
+
+nmap <leader>z :undo<CR>
+nmap <leader>u :UndotreeShow<CR>
+
+nmap <leader>f :Lines <CR>
+nmap <leader>o :Files <CR>
+nmap <leader>co :Commits <CR>
+nmap <leader>h :help key-notation<CR>
+nmap <leader>r :source ~/.config/nvim/init.vim<CR>
+nmap <leader>s :w <CR>
+nmap <leader>q :x <CR>
+
+" for autoread to auto load
+au FocusGained,BufEnter * :silent! !
+au FocusLost,WinLeave * :silent! w
+" mouse control
+set mouse=a
+let g:is_mouse_enabled = 1
+noremap <silent> <Leader>m :call ToggleMouse()<CR>
+function ToggleMouse()
+    if g:is_mouse_enabled == 1
+        echo "Mouse OFF"
+        set mouse=
+        let g:is_mouse_enabled = 0
+    else
+        echo "Mouse ON"
+        set mouse=a
+        let g:is_mouse_enabled = 1
+    endif
+endfunction
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
@@ -63,14 +107,119 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline_powerline_fonts = 1
 
-let g:compete_enable = v:true
-let g:compete_completeopt= 'menu,menuone,noinsert'
-let g:compete_fuzzy = v:true
+" specific settings
+set fo+=t
+set t_Co=256
+set nocursorline
+set title
+set relativenumber
+set autoread
+set autowriteall
+set bs=2
+set noautoindent
+set ruler
+set shortmess=aoOTI
+set nocompatible
+set showmode
+set splitbelow
+set nomodeline
+set showcmd
+set completeopt-=preview
+set showmatch
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set cinoptions=(0,m1,:1
+set tw=80
+set formatoptions=tcqro2
+set smartindent
+set laststatus=2
+set clipboard=unnamed
+set softtabstop=2
+set showtabline=1
+set sidescroll=5
+set scrolloff=4
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set foldmethod=marker
+set ttyfast
+set history=10000
+set hidden
+set number
+set complete=.,w,b,u,t
+set completeopt=longest,menuone,preview
+set noswapfile
+set foldlevelstart=0
+set wildmenu
+set wildmode=list:longest,full
+set nowrap
+set statusline=%{getcwd()}\/\%f%=%-14.(%l,%c%V%)\ %P
+set hidden
+set autoread
+set conceallevel=2
+set diffopt+=vertical
+set concealcursor=vin
 
-" add here
-let g:snippets_dir='~/.vim/vim-snippets/snippets'
-let g:riv_disable_folding=1
+" backup
+set undodir=~/.vim/tmp/undo//
+set backupdir=~/.vim/tmp/backup//
+set directory=~/.vim/tmp/swap//
 
+" make directories automatically if they don't already exist
+if !isdirectory(expand(&undodir))
+    call mkdir(expand(&undodir), "p")
+endif
+if !isdirectory(expand(&backupdir))
+    call mkdir(expand(&backupdir), "p")
+endif
+if !isdirectory(expand(&directory))
+    call mkdir(expand(&directory), "p")
+endif
+
+" close brackets
+:inoremap ( ()<Esc>i
+:inoremap < <><Esc>i
+:inoremap { {}<Esc>i
+:inoremap [ []<Esc>i
+:inoremap " ""<Esc>i
+:inoremap ' ''<Esc>i
+:inoremap ` ``<Esc>i
+
+" cursorline
+au WinLeave * set nocursorline
+au WinEnter * set cursorline
+set cursorline
+
+" clang stuff
+let g:clang_library_path='/usr/lib/'
+let g:clang_user_options='|| exit 0'
+let g:clang_complete_auto = 1
+let g:clang_compelte_macros=1
+let g:clang_complete_copen = 1
+let g:clang_debug = 1
+let g:clang_snippets=1
+let g:clang_conceal_snippets=1
+let g:clang_snippets_engine='clang_complete'
+colorscheme material
+
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+augroup folding
+  autocmd FileType vim setlocal foldmethod=marker
+  autocmd FileType vim execute "normal! zM"
+augroup END
+
+au BufRead,BufNewFile .eslintrc set filetype=json
+
+autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+autocmd BufReadPre *.asm let g:asmsyntax = "fasm"
+
+autocmd FileType scss setl iskeyword+=@-@
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" python
 let g:pymode_python='python'
 let g:syntastic_python_python_exec='python'
 let g:pymode_rope=1
@@ -107,118 +256,6 @@ let g:cpp_named_requirements_highlight = 1
 
 autocmd BufReadPre *.asm let g:asmsyntax = "fasm"
 
-
-set mouse=a
-let g:is_mouse_enabled = 1
-noremap <silent> <Leader>m :call ToggleMouse()<CR>
-function ToggleMouse()
-    if g:is_mouse_enabled == 1
-        echo "Mouse OFF"
-        set mouse=
-        let g:is_mouse_enabled = 0
-    else
-        echo "Mouse ON"
-        set mouse=a
-        let g:is_mouse_enabled = 1
-    endif
-endfunction
-
-set foldmethod=indent
-set foldlevel=99
-
-syntax on
-set hlsearch
-
-let NERDTreeHijackNetrw=1
-let NERDTreeShowHidden=1
-
-function! ToggleNERDTree()
- NERDTreeToggle
-  silent NERDTreeMirror
-endfunction
-
-let mapleader = "\<Space>"
-
-nmap <leader>r :source ~/.vimrc<CR>
-
-nmap <leader>n :call ToggleNERDTree()<CR>
-nmap <leader>s :w <CR>
-nmap <leader>q :x <CR>
-nmap <leader>f :Lines <CR>
-nmap <leader>o :Files <CR>
-nmap <leader>co :Commits <CR>
-nmap <leader>h :help key-notation<CR>
-
-
-
-nmap <S-Right> <C-w>l
-nmap <S-Left> <C-w>h
-nmap <S-Up> <C-w>k
-nmap <S-Down> <c-w>j
-
-nmap <leader>z :undo<CR>
-nmap <leader>u :UndotreeShow<CR>
-
-nnoremap <C-Up> :resize +2<CR>
-nnoremap <C-Down> :resize -2<CR>
-nnoremap <C-Left> :vertical resize +2<CR>
-nnoremap <C-Right> :vertical resize -2<CR>
-
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-if has('nvim')
-  augroup term
-    autocmd!
-    autocmd TermOpen * setlocal nonumber norelativenumber
-  augroup END
-endif
-
-augroup folding
-  autocmd FileType vim setlocal foldmethod=marker
-  autocmd FileType vim execute "normal! zM"
-augroup END
-
-au BufRead,BufNewFile .eslintrc set filetype=json
-
-autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-
-autocmd! FileType fzf
-autocmd  FileType fzf set laststatus=0 noruler
-  \| autocmd BufLeave <buffer> set laststatus=2 ruler
-
-" Disable Searchant highlight when incsearch.vim highlights also disable
-autocmd CursorMoved * call SearchantStop()
-function! SearchantStop()
-  :execute "normal \<Plug>SearchantStop"
-endfunction
-" }}}
-
-" FUNCTIONS {{{
-"
-" correct label for folding block in vimrc
-set foldtext=MyFoldText()
-function! MyFoldText()
-  let line = getline(v:foldstart)
-  let sub = substitute(line, '/\*\|\*/\|{{{\d\=', '', 'g')
-  return v:folddashes . sub
-endfunction
-
-let g:fzf_preview_window = ''
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
-let $FZF_DEFAULT_OPTS='-m --reverse'
-let g:fzf_layout = { 'window': { 'width': 0.6, 'height': 0.6 } }
-let g:fzf_colors = { 'fg+':     ['fg', 'Exception', 'CursorColumn', 'Normal'] }
-
-
-if (has('nvim'))
-      let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
-endif
-
-if (has('termguicolors'))
-    set termguicolors
-endif
-
-
-
 function! s:show_documentation()
   if &filetype == 'vim'
     execute 'h '.expand('<cword>')
@@ -244,42 +281,10 @@ function! s:get_visual_selection()
   let lines[0] = lines[0][column_start - 1:]
   return join(lines, "\n")
 endfunction
-" 
+"
 " }}}
 
+if (has('nvim'))
+      let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
+endif
 
-
-call plug#begin('~/.vim/plugged')
-
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'scrooloose/nerdtree'
-
-"add ============================
-Plug 'garbas/vim-snipmate'
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'honza/vim-snippets'
-Plug 'mbbill/undotree'
-Plug 'Townk/vim-autoclose'
-Plug 'kaicataldo/material.vim', { 'branch': 'main' }
-"== add 2 =======================================
-Plug 'tpope/vim-commentary'
-Plug 'mitsuhiko/vim-sparkup'
-Plug 'Rykka/riv.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-"== add 3 =======================================
-
-Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-fugitive'
-Plug 'lambdalisue/gina.vim'
-Plug 'junegunn/vim-easy-align'
-Plug 'machakann/vim-sandwich'
-Plug 'semanser/vim-outdated-plugins'
-Plug 'RRethy/vim-illuminate'
-Plug 'dstein64/vim-startuptime'
-Plug 'stsewd/fzf-checkout.vim'
-
-Plug 'vim-scripts/AutoComplPop'
-Plug 'ryanoasis/vim-devicons'
-call plug#end()

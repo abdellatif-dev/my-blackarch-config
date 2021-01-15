@@ -151,19 +151,18 @@ nmap <leader>h :help key-notation<CR>
 
 
 
-nmap <S-l> <C-w>l
-nmap <S-h> <C-w>h
-nmap <S-k> <C-w>k
-nmap <S-j> <c-w>j
+nmap <S-Right> <C-w>l
+nmap <S-Left> <C-w>h
+nmap <S-Up> <C-w>k
+nmap <S-Down> <c-w>j
 
 nmap <leader>z :undo<CR>
 nmap <leader>u :UndotreeShow<CR>
 
-
-nnoremap <C-k> :resize +2<CR>
-nnoremap <C-j> :resize -2<CR>
-nnoremap <C-h> :vertical resize +2<CR>
-nnoremap <C-l> :vertical resize -2<CR>
+nnoremap <C-Up> :resize +2<CR>
+nnoremap <C-Down> :resize -2<CR>
+nnoremap <C-Left> :vertical resize +2<CR>
+nnoremap <C-Right> :vertical resize -2<CR>
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 if has('nvim')
