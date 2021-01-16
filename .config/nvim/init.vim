@@ -8,14 +8,22 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree.git'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'scrooloose/nerdtree-project-plugin'
+
 Plugin 'xavierd/clang_complete'
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/nerdtree-project-plugin'
+
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'RRethy/vim-illuminate'
 
+Plugin 'junegunn/fzf', {'dir': '~/.fzf','do': './install --all'}
+Plugin 'junegunn/fzf.vim' " needed for previews
+
+Plugin 'ap/vim-css-color'
 Plugin 'stsewd/fzf-checkout.vim'
 Plugin 'kaicataldo/material.vim', { 'branch': 'main' }
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -27,10 +35,10 @@ Plugin 'machakann/vim-sandwich'
 Plugin 'honza/vim-snippets'
 Plugin 'mbbill/undotree'
 Plugin 'Townk/vim-autoclose'
-Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " coc-nvim
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'neoclide/coc-denite'
+
 call vundle#end()            " required
 " Vundle -----------------------------------------------------------------------
 
@@ -38,6 +46,7 @@ call vundle#end()            " required
 filetype plugin indent on
 syntax on
 
+let g:coc_global_extensions=[ 'coc-omnisharp' ]
 
 " whitespaces
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
@@ -53,6 +62,12 @@ function! ToggleNERDTree()
  NERDTreeToggle
   silent NERDTreeMirror
 endfunction
+
+function! ToggleUndoTree()
+    UndotreeShow
+  silent UndotreeFocus
+ endfunction
+
 " sessions
 let mapleader = "\<Space>"
 noremap <F1> :mksession! .vim.session <cr>
@@ -72,11 +87,12 @@ nmap <S-j> <c-w>j
 
 
 nmap <leader>z :undo<CR>
-nmap <leader>u :UndotreeShow<CR>
+nmap <leader>u :call ToggleUndoTree()<CR>
 
-nmap <leader>f :Lines <CR>
 nmap <leader>o :Files <CR>
+nmap <leader>f :Lines <CR>
 nmap <leader>co :Commits <CR>
+
 nmap <leader>h :help key-notation<CR>
 nmap <leader>r :source ~/.config/nvim/init.vim<CR>
 nmap <leader>s :w <CR>
