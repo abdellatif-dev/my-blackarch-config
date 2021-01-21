@@ -3,8 +3,8 @@ local awful = require("awful")
 local hotkeys_popup = require("awful.hotkeys_popup")
 
 
-terminal = "terminator"
-editor = os.getenv("vim") or "vim"
+terminal = "st"
+editor = "nvim"
 editor_cmd = terminal .. " -e " .. editor
 
 modkey = "Mod4"
@@ -30,58 +30,33 @@ globalkeys = gears.table.join(
 
     awful.key({ modkey, "Control"    }, "h", function () awful.client.focus.byidx(1) end,
               {description = "focus next by index", group = "client"}),
-        
-    awful.key({ modkey, "Control"    }, "l", function () awful.client.focus.byidx(-1) end, 
+
+    awful.key({ modkey, "Control"    }, "l", function () awful.client.focus.byidx(-1) end,
               {description = "focus previous by index", group = "client"}),
-          
+
     awful.key({ modkey, "Shift"   }, "h", function () awful.client.swap.byidx(  1)    end,
-              {description = "swap with next client by index", group = "client"}), 
-          
+              {description = "swap with next client by index", group = "client"}),
+
     awful.key({ modkey, "Shift"   }, "l", function () awful.client.swap.byidx( -1)    end,
               {description = "swap with previous client by index", group = "client"}),
-              
 
-    -- awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
-    --           {description = "view previous", group = "tag"}),
-    -- awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
-    --           {description = "view next", group = "tag"}),
-    -- awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
-    --           {description = "go back", group = "tag"}),
-    -- awful.key({ modkey, "Control"    }, "Left", function () awful.client.focus.byidx(1) end,
-    --     {description = "focus next by index", group = "client"}),
-    -- awful.key({ modkey, "Control"    }, "Right", function () awful.client.focus.byidx(-1) end, 
-    --     {description = "focus previous by index", group = "client"}),
-    -- awful.key({ modkey, "Shift"   }, "Left", function () awful.client.swap.byidx(  1)    end,
-    --     {description = "swap with next client by index", group = "client"}), 
-    -- awful.key({ modkey, "Shift"   }, "Right", function () awful.client.swap.byidx( -1)    end,
-    --     {description = "swap with previous client by index", group = "client"}),
-
-    -- Standard program
     awful.key({ modkey, "Shift"  }, "w", function () mymainmenu:show() end,
             {description = "show main menu", group = "awesome"}),
-        
+
+    awful.key({ modkey,           }, "u", awful.client.urgent.jumpto,
+              {description = "jump to urgent client", group = "client"}),
+
+    awful.key({ modkey,   }, "k",     function () awful.tag.incmwfact( 0.05)    end),
+    awful.key({ modkey,   }, "j",     function () awful.tag.incmwfact(-0.05)    end),
+
     awful.key({ modkey, }, "Tab",  function () awful.util.spawn("/home/flagmate/.config/awesome/scripts/openedapps") end,
             {description = "focus apps", group = "a script"}),
 
-    awful.key({ modkey, "Control" }, "t", function () awful.spawn(terminal) end,
-            {description = "open terminator", group = "a software"}),
-
-    awful.key({ modkey,  }, "b", function () awful.util.spawn("blueberry") end,
-            {description = "open blueberry", group = "a software"}),
-
+    awful.key({ modkey, }, "t", function () awful.spawn(terminal) end,
+            {description = "open termite", group = "a software"}),
 
     awful.key({ modkey,  }, "p", function () awful.util.spawn("passmenu") end,
             {description = "open passmenu", group = "a software"}),
-
-    awful.key({ modkey,  }, "a", function () awful.util.spawn("alacritty") end,
-            {description = "open alacritty", group = "a software"}),
-            
-    awful.key({ modkey,"Shift"  }, "t", function () awful.util.spawn("xfce4-terminal") end,
-            {description = "open xfce4-terminal", group = "a software"}),
-
-    -- awful.key({ modkey, }, "o", function () awful.util.spawn("libreoffice") end,
-    --           {description = "open libreoffice", group = "a software"}),
-
 
     awful.key({ modkey, }, "d", function () awful.util.spawn("dmenu_run") end,
             {description = "open dmenu_run", group = "a software"}),
@@ -95,12 +70,6 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Control" }, "a", function () awful.util.spawn("pavucontrol") end,
               {description = "open pavucontrol", group = "a script"}),
 
-    awful.key({ modkey,  }, "0", function () awful.util.spawn("i3lock -i Pictures/1st-slider.png") end,
-              {description = "i3lock", group = "a software"}),
-    
-    awful.key({ modkey, "Shift" }, "n", function () awful.util.spawn("nemo") end,
-              {description = "open nemo", group = "a software"}),
-    
     awful.key({ modkey, "Control" }, "s", function () awful.util.spawn("simplescreenrecorder") end,
               {description = "simplescreenrecorder", group = "a software"}),
 
@@ -112,24 +81,15 @@ globalkeys = gears.table.join(
 
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
+
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
 
-            -- torbrowser-launcher
-
-    awful.key({ modkey, "Control"   }, "o", function () awful.util.spawn("torbrowser-launcher") end,
-        {description = "launch torbrowser", group = "a software"}),
-
-	--chromium
-    awful.key({ modkey, "Control"   }, "c", function () awful.util.spawn("chromium") end,
-              {description = "launch chromium", group = "a software"}),
-
-
-
-    awful.key({ modkey, }, "t", function () awful.util.spawn("termite") end,
-              {description = "launch termite", group = "a software"}),
     awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
               {description = "select next", group = "layout"}),
+
+
+
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
               {description = "select previous", group = "layout"}),
 
@@ -152,20 +112,16 @@ globalkeys = gears.table.join(
     awful.key({modkey, "Shift"}, "r", function () awful.util.spawn("/home/flagmate/.config/awesome/scripts/menu_full") end,
               {description= "full menu", group= "a script"}),
 
-    awful.key({ modkey, "Control" }, "m",  function () awful.util.spawn("/home/flagmate/.config/awesome/scripts/mail") end,
-              {description = "run mutt", group = "a script"}),
-
-    awful.key({ modkey, "Shift" }, "v",  function () awful.util.spawn("gvim") end,
+    awful.key({ modkey, "Shift" }, "v",  function () awful.util.spawn("gnvim") end,
               {description = "run vim", group = "a software"}),
-
-    awful.key({ modkey, "Shift" }, "f",  function () awful.util.spawn("/home/flagmate/.config/awesome/scripts/vifm") end,
-              {description = "run vifm", group = "a script"}),
-
-    awful.key({ modkey, "Shift"  }, "o",     function () awful.util.spawn("obs") end,
-              {description = "run obs", group = "a software"}),
 
     awful.key({ modkey,  }, "Return",     function () awful.util.spawn("screenkey") end,
               {description = "run screenkey", group = "a software"}),
+
+    awful.key({ modkey, "Control" }, "t",     function () awful.util.spawn("terminator") end,
+              {description = "run terminator", group = "a software"}),
+
+
 
     awful.key({ modkey, "Shift"  }, "Return",     function () awful.util.spawn("killall screenkey") end,
               {description = "stop screenkey", group = "a software"}),
@@ -177,9 +133,6 @@ globalkeys = gears.table.join(
     awful.key({ modkey , "Control" }, "b",     function () awful.util.spawn("brave") end,
               {description = "run brave", group = "a software"}),
 
-    awful.key({ modkey , "Shift" }, "b",     function () awful.util.spawn("firefox") end,
-              {description = "run firefox", group = "a software"}),
-
     awful.key({ modkey , "Control" }, "v",     function () awful.util.spawn("code") end,
              {description = "run vs code", group = "a software"}),
 
@@ -187,49 +140,10 @@ globalkeys = gears.table.join(
              {description = "run gimp", group = "a software"}),
 
              -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end,
+    awful.key({ modkey , "Control" }, "p", function() menubar.show() end,
               {description = "show the menubar", group = "client"})
 )
 
-clientkeys = gears.table.join(
-    awful.key({ modkey,           }, "f",
-        function (c)
-            c.fullscreen = not c.fullscreen
-            c:raise()
-        end,
-        {description = "toggle fullscreen", group = "client"}),
-    awful.key({ modkey, }, "w",      function (c) c:kill()                         end,
-              {description = "close", group = "client"}),
-    awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
-              {description = "toggle floating", group = "layout"}),
-    awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end,
-              {description = "move to master", group = "client"}),
-    awful.key({ modkey,           }, "o",      function (c) c:move_to_screen()               end,
-              {description = "move to screen", group = "client"}),
-    awful.key({ modkey,           }, "n",
-        function (c)
-            -- The client currently has the input focus, so it cannot be
-            -- minimized, since minimized clients can't have the focus.
-            c.minimized = true
-        end ,
-        {description = "minimize", group = "client"}),
-    awful.key({ modkey,           }, "m",
-        function (c)
-            c.maximized = not c.maximized
-            c:raise()
-        end ,
-        {description = "(un)maximize", group = "client"}),
-    awful.key({ modkey, "Shift"   }, "m",
-        function (c)
-            c.maximized_horizontal = not c.maximized_horizontal
-            c:raise()
-        end ,
-        {description = "(un)maximize horizontally", group = "client"})
-)
-
--- Bind all key numbers to tags.
--- Be careful: we use keycodes to make it work on any keyboard layout.
--- This should map on the top row of your keyboard, usually 1 to 9.
 for i = 1, 9 do
     globalkeys = gears.table.join(globalkeys,
         -- View tag only.
@@ -279,6 +193,45 @@ clientbuttons = gears.table.join(
         awful.mouse.client.resize(c)
     end)
 )
+
+
+clientkeys = awful.util.table.join(
+    awful.key({ modkey,           }, "f",      function (c) c.fullscreen = not c.fullscreen  end),
+    awful.key({ modkey,           }, "w",      function (c) c:kill()                         end),
+    awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ),
+    awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end),
+    awful.key({ modkey,           }, "o",      awful.client.movetoscreen                        ),
+    awful.key({ modkey,           }, "`",      function (c) c.ontop = not c.ontop            end),
+
+
+    awful.key({ modkey,           }, "n",
+        function (c)
+            -- The client currently has the input focus, so it cannot be
+            -- minimized, since minimized clients can't have the focus.
+            c.minimized = true
+        end),
+    awful.key({ modkey,           }, "m",
+        function (c)
+            c.maximized = not c.maximized
+            c:raise()
+        end)
+)
+
+
+clientbuttons = gears.table.join(
+    awful.button({ }, 1, function (c)
+        c:emit_signal("request::activate", "mouse_click", {raise = true})
+    end),
+    awful.button({ modkey }, 1, function (c)
+        c:emit_signal("request::activate", "mouse_click", {raise = true})
+        awful.mouse.client.move(c)
+    end),
+    awful.button({ modkey }, 3, function (c)
+        c:emit_signal("request::activate", "mouse_click", {raise = true})
+        awful.mouse.client.resize(c)
+    end)
+)
+
 
 -- Set keys
 root.keys(globalkeys)

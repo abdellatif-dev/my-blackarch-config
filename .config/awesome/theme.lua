@@ -1,5 +1,6 @@
 ---------------------------
 -- my blackarch awesome theme --
+-- modified by abdellatif-dev --
 ---------------------------
 local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
@@ -9,23 +10,23 @@ local gfs = require("gears.filesystem")
 local themes_path = gfs.get_themes_dir()
 theme = {}
 
-theme.useless_gap   = 0
+theme.useless_gap   = 7
 
 theme.font          = "Hack Nerd Font 12"
 
-theme.bg_normal     = "#090A0F00"
-theme.bg_focus      = "#090A0F00"
-theme.bg_urgent     = "#D4191980"
-theme.bg_minimize   = "#AAAAAA70"
+theme.bg_normal     = "#090A0F60"
+theme.bg_focus      = "#090A0F90"
+theme.bg_urgent     = "#090A0F00"
+theme.bg_minimize   = "#AAAAAA80"
 theme.bg_systray    = theme.bg_normal
 
 theme.fg_normal     = "#AAAAAA"
 theme.fg_focus      = "#E98567"
-theme.fg_urgent     = "#090A0F"
+theme.fg_urgent     = "#D41919"
 theme.fg_minimize   = "#FAC86A"
 
-theme.border_width  = 3
-theme.border_normal = "#E98567"
+theme.border_width  = 0
+theme.border_normal = "#e98567"
 theme.border_focus  = "#89DDFF"
 theme.border_marked = "#EC0101"
 

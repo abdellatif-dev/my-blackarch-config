@@ -22,7 +22,7 @@ Plugin 'RRethy/vim-illuminate'
 
 Plugin 'junegunn/fzf', {'dir': '~/.fzf','do': './install --all'}
 Plugin 'junegunn/fzf.vim' " needed for previews
-
+Plugin 'fatih/vim-go'
 Plugin 'ap/vim-css-color'
 Plugin 'stsewd/fzf-checkout.vim'
 Plugin 'kaicataldo/material.vim', { 'branch': 'main' }
@@ -35,9 +35,13 @@ Plugin 'machakann/vim-sandwich'
 Plugin 'honza/vim-snippets'
 Plugin 'mbbill/undotree'
 Plugin 'Townk/vim-autoclose'
+" rust
+Plugin 'rust-lang/rust.vim'
+Plugin 'rhysd/rust-doc.vim'
+Plugin 'arzg/vim-rust-syntax-ext'
 " coc-nvim
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-Plugin 'neoclide/coc-denite'
+
 
 call vundle#end()            " required
 " Vundle -----------------------------------------------------------------------
@@ -91,9 +95,13 @@ nmap <leader>u :call ToggleUndoTree()<CR>
 
 nmap <leader>o :Files <CR>
 nmap <leader>f :Lines <CR>
+nmap <leader>b :Buffers <CR>
 nmap <leader>co :Commits <CR>
 
-nmap <leader>h :help key-notation<CR>
+map <leader>h :split <CR>
+map <leader>v :vsplit <CR>
+
+nmap <leader>he :help key-notation<CR>
 nmap <leader>r :source ~/.config/nvim/init.vim<CR>
 nmap <leader>s :w <CR>
 nmap <leader>q :x <CR>
@@ -132,15 +140,15 @@ set relativenumber
 set autoread
 set autowriteall
 set bs=2
-set noautoindent
+set autoindent
 set ruler
 set shortmess=aoOTI
 set nocompatible
 set showmode
 set splitbelow
-set nomodeline
+set splitright
 set showcmd
-set completeopt-=preview
+set completeopt+=preview
 set showmatch
 set tabstop=4
 set shiftwidth=4
@@ -150,7 +158,6 @@ set tw=80
 set formatoptions=tcqro2
 set smartindent
 set laststatus=2
-set clipboard=unnamed
 set softtabstop=2
 set showtabline=1
 set sidescroll=5
@@ -163,7 +170,6 @@ set foldmethod=marker
 set ttyfast
 set history=10000
 set hidden
-set number
 set complete=.,w,b,u,t
 set completeopt=longest,menuone,preview
 set noswapfile
@@ -203,6 +209,13 @@ endif
 :inoremap ' ''<Esc>i
 :inoremap ` ``<Esc>i
 
+
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
+
 " cursorline
 au WinLeave * set nocursorline
 au WinEnter * set cursorline
@@ -230,7 +243,6 @@ augroup END
 au BufRead,BufNewFile .eslintrc set filetype=json
 
 autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-autocmd BufReadPre *.asm let g:asmsyntax = "fasm"
 
 autocmd FileType scss setl iskeyword+=@-@
 autocmd CursorHold * silent call CocActionAsync('highlight')
@@ -303,4 +315,21 @@ endfunction
 if (has('nvim'))
       let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
 endif
+
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
+" Add `:Format` command to format current buffer.
+command! -nargs=0 Format :call CocAction('format')
+
+" Add `:Fold` command to fold current buffer.
+command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+
+" Add `:OR` command for organize imports of the current buffer.
+command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 

@@ -17,28 +17,28 @@ awful.rules.rules = {
                      screen = awful.screen.preferred,
                      placement = awful.placement.no_overlap+awful.placement.no_offscreen
      },
-    
+
     },
     -- app rules
     { rule = { instance = "brave" }, properties = { tag = " " } },
     { rule = { instance = "chromium" }, properties = { tag = " " } },
     { rule = { class = "firefox" }, properties = { tag = " " } },
     { rule = { class = "surf" }, properties = { tag = " " } },
-    
+
     { rule = { instance = "terminator" }, properties = { tag = " " } },
     { rule = { instance = "xfce4-terminal" }, properties = { tag = " " } },
     { rule = { instance = "termite" }, properties = { tag = " " } },
     { rule = { class = "st" }, properties = { tag = " " } },
     { rule = { instance = "alacritty" }, properties = { tag = " " } },
-    
+
     { rule = { instance = "code" }, properties = { tag = " " } },
     { rule = { instance = "gvim" }, properties = { tag = " " } },
-    
+
     { rule = { instance = "wireshark" }, properties = { tag = " ﴣ" } },
     { rule = { instance = "hopper" }, properties = { tag = " ﴣ" } },
     { rule = { class = "ghidra" }, properties = { tag = " ﴣ" } },
     { rule = { instance = "johnny" }, properties = { tag = " ﴣ" } },
-    
+
     { rule = { instance = "nemo" }, properties = { tag = " " } },
     { rule = { instance = "thunar" }, properties = { tag = " " } },
     { rule = { instance = "pcmanfm" }, properties = { tag = " " } },
@@ -47,15 +47,15 @@ awful.rules.rules = {
     { rule = { instance = "gimp" }, properties = { tag = " " } },
 
     { rule = { instance = "kdenlive" }, properties = { tag = "辶 " } },
-    
+
     { rule = { instance = "polybar" }, properties = { tag = "拓 " } },
     { rule = { instance = "simplescreenrecorder" }, properties = { tag = "拓 " } },
     { rule = { instance = "lxappearance" }, properties = { tag = "拓 " } },
     { rule = { instance = "discord" }, properties = { tag = "拓 " } },
     { rule = { instance = "pavucontrol" }, properties = { tag = "拓 " } },
-    
 
-    
+
+
     -- Floating clients.
     { rule_any = {
         class = {

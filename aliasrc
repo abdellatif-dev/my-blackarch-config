@@ -7,10 +7,10 @@ alias rt='rm * -rf'
 alias ip='ip -color=auto'
 alias diff='diff --color=auto'
 alias wallpaper='feh --randomize --bg-scale ~/Pictures/*'
-# ls 
-alias la='lsd -a'  
-alias lla='lsd -la' 
-alias ll='lsd -l'   
+# ls
+alias la='lsd -a'
+alias lla='lsd -la'
+alias ll='lsd -l'
 alias ls='lsd'
 alias cat='bat --theme TwoDark'
 alias sd='doas'
@@ -23,6 +23,7 @@ alias config='nvim ~/.zshrc' # Quick access to the ~/.zshrc file
 alias wget="wget -U 'noleak'"
 alias curl="curl --user-agent 'noleak'"
 alias grep='grep --color'
+alias cleansystemd='sudo journalctl --vacuum-size=1G --vacuum-time=5d --vacuum-files=5'
 alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS} '
 alias gitdiff='git diff --color | diff-so-fancy'
 alias clh="history -c;reset"
@@ -30,7 +31,9 @@ alias sthelp='cat ~/.config/st/man.md'
 alias rm='rm -iv'
 alias cp='cp -iv'
 alias mv='mv -iv'
-alias vi='vim ./'
+alias vi='nvim ./'
+alias twitchchat='twitchChatCLI-linux-amd64 abdellatifdev'
+alias vim='nvim'
 # alias to auto cd
 alias hacking='cd ~/Desktop/.hacking/'
 alias dev='cd ~/Desktop/dev/'
@@ -39,5 +42,5 @@ alias scripts="cd ~/scripts"
 alias shinedown="cd ~/Music/shinedown/"
 alias live="cd ~/Music/live/"
 alias music="cd ~/Music/"
-alias btw="echo 'I use Arch linux'" 
+alias btw="echo 'I use Arch linux'"
 

@@ -1,15 +1,13 @@
 # Themes are into ~/.zsh/oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each time
-# ZSH_THEME="spaceship"
+#ZSH_THEME="spaceship"
 
 # Plugin list in ~/.zsh/oh-my-zsh/plugins
 plugins=(git git-prompt archlinux nmap systemd)
 
-# Disable oh-my-zsh update
-DISABLE_UPDATE_PROMPT=true
-DISABLE_AUTO_UPDATE=true
-
 source $HOME/.zsh/oh-my-zsh/oh-my-zsh.sh
+
+export EDITOR="nvim"
 
 # ZSH history file
 HISTSIZE=100
@@ -74,12 +72,45 @@ bindkey '^[[F' end-of-line
 PATH=$PATH:/home/flagmate/.tools/010editor;export PATH;
 PATH=$PATH:/home/flagmate/scripts/;export PATH;
 PATH=$PATH:/home/flagmate/.tools/myscripts;export PATH;
-
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
-source /usr/share/autojump/autojump.zsh 2>/dev/null
-source /usr/share/zsh-navigation-tools/zsh-navigation-tools.plugin.zsh
+fpath+=~/.zfunc
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 source $HOME/aliasrc
-eval "$(starship init zsh)"
+#eval "$(starship init zsh)"
 
-figlet -f slant flagmate
+
+autoload -U colors && colors
+# Custom ZSH Binds
+bindkey '^ ' autosuggest-accept
+
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^B' edit-command-line
+
+
+# # usage: ex <file>
+ex ()
+{
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.tar.xz)    tar xJf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1     ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *)           echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
+PROMPT="%F{10}[%B%F{7}%n%f%b%F{5}@%f%B%F{7}%m%f%b%F{10}]%f-%F{10}[%f%B%F{7}%t %f%b%F{10}]%f-%F{10}[%f%F{3}%B%1~%b%f%F{10}]%f
+%F{10}[%B%F{7}%h%f%b%F{10}|%B%F{7}%?%f%b%F{10}]%f-%F{3}%B$%b%f: "
+

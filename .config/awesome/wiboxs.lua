@@ -6,7 +6,7 @@ local menubar = require("menubar")
 
 -- {{{ Wibox
 -- Create a textclock widget
-mytextclock = awful.widget.textclock()
+-- mytextclock = awful.widget.textclock()
 
 
 -- Create a wibox for each screen and add it
@@ -45,7 +45,7 @@ mytasklist.buttons = awful.util.table.join(
                                                   instance:hide()
                                                   instance = nil
                                               else
-                                                  instance = awful.menu.clients({ width=250 })
+                                                  instance = awful.menu.clients({ width=200 })
                                               end
                                           end),
                      awful.button({ }, 4, function ()
@@ -80,7 +80,7 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the left
     local left_layout = wibox.layout.fixed.horizontal()
     -- left_layout:add(mylauncher)
-    -- left_layout:add(mytaglist[s])
+    left_layout:add(mytaglist[s])
     left_layout:add(mypromptbox[s])
 
     -- Widgets that are aligned to the right

@@ -1,4 +1,3 @@
-# Which is equivalent to
 format = """
 $username\
 $hostname\
@@ -93,7 +92,7 @@ format = "via [ $version]($style) "
 format = "via [ $version](147 bold) "
 
 [python]
-format = "via [ $version](147 bold) "
+format = "via [ $version](147 bold)"
 
 [ruby]
 symbol = " "
