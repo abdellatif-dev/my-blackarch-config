@@ -1,0 +1,8 @@
+#!/bin/sh
+
+printf "full path of the wallpaper: "
+read pic
+sudo cp $pic /usr/share/blackarch/wallpaper-cyberpunk.png
+sudo cp $pic /usr/share/blackarch/wallpaper.png
+sudo cp $pic /usr/share/blackarch/wallpaper.jpg
+

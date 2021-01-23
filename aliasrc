@@ -17,6 +17,8 @@ alias sd='doas'
 alias rmdir='rm -rvdf'
 alias rm='rm -f'
 alias mutt='neomutt'
+alias twitchevents='surf https://streamlabs.com/widgets/event-list/v1/AC97977ADD29F347F511'
+alias twitchviewrs='surf https://streamlabs.com/widgets/viewer-count\?token\=AC97977ADD29F347F511'
 alias python="python2"
 alias shred="shred -zf"
 alias config='nvim ~/.zshrc' # Quick access to the ~/.zshrc file
@@ -43,4 +45,4 @@ alias shinedown="cd ~/Music/shinedown/"
 alias live="cd ~/Music/live/"
 alias music="cd ~/Music/"
 alias btw="echo 'I use Arch linux'"
-
+alias startingstream='afk -k "starting soon" 0 7 00'

@@ -10,701 +10,284 @@
 
 # hlsearch on (H) or off (h):
 ~h
-# Last Search Pattern:
-~Msle0~/\<include\>
+# Last Substitute String:
+$
 
 # Command Line History (newest to oldest):
-:PlugInstall
-|2,0,1603623537,,"PlugInstall"
-:Git
-|2,0,1603623083,,"Git"
-:vs
-|2,0,1603622983,,"vs"
-:PlugUpdate
-|2,0,1603622940,,"PlugUpdate"
-:PlugClean
-|2,0,1603622932,,"PlugClean"
-:+1
-|2,0,1603622895,,"+1"
-:2
-|2,0,1603622891,,"2"
-:-1
-|2,0,1603622886,,"-1"
-:PlugUpgrade
-|2,0,1603622420,,"PlugUpgrade"
 :cq
-|2,0,1602593958,,"cq"
+|2,0,1611079121,,"cq"
+:x
+|2,0,1610984753,,"x"
+:wq
+|2,0,1610923586,,"wq"
+:q
+|2,0,1610918842,,"q"
 
 # Search String History (newest to oldest):
-? \<include\>
-|2,1,1602768730,,"\\<include\\>"
+? \s\+$
+|2,1,1611164530,,"\\s\\+$"
+? @$
+|2,1,1610843572,,"@$"
 
 # Expression History (newest to oldest):
 
 # Input Line History (newest to oldest):
-@y
-|2,3,1603622329,,"y"
 
 # Debug Line History (newest to oldest):
 
 # Registers:
+"k	CHAR	0
+	k
+|3,0,20,0,1,0,1610842914,"k"
 "q	CHAR	0
-	 `` 
-|3,0,26,0,1,0,1603397509," `` "
-""-	CHAR	0
-	#!
-|3,1,36,0,1,0,1603623576,"#!"
+	 
+|3,0,26,0,1,0,1610918835," "
 
 # File marks:
-'0  1  0  ~/Templates/py3.py
-|4,48,1,0,1603623854,"~/Templates/py3.py"
-'1  1  2  ~/Templates/py3.py
-|4,49,1,2,1603623832,"~/Templates/py3.py"
-'2  1  0  ~/Templates/py3.py
-|4,50,1,0,1603623787,"~/Templates/py3.py"
-'3  1  0  ~/Templates/py3.py
-|4,51,1,0,1603623787,"~/Templates/py3.py"
-'4  1  0  ~/Templates/py3.py
-|4,52,1,0,1603623784,"~/Templates/py3.py"
-'5  1  0  ~/Templates/py3.py
-|4,53,1,0,1603623784,"~/Templates/py3.py"
-'6  1  0  ~/Templates/py3.py
-|4,54,1,0,1603623784,"~/Templates/py3.py"
-'7  1  0  ~/Templates/py3.py
-|4,55,1,0,1603623784,"~/Templates/py3.py"
-'8  1  0  ~/Templates/py3.py
-|4,56,1,0,1603623777,"~/Templates/py3.py"
-'9  1  0  ~/Templates/py3.py
-|4,57,1,0,1603623777,"~/Templates/py3.py"
+'0  15  73  ~/Desktop/dev/twitchbox/t
+|4,48,15,73,1611164534,"~/Desktop/dev/twitchbox/t"
+'1  8  0  ~/Desktop/dev/play_ground/src/main.rs
+|4,49,8,0,1611082602,"~/Desktop/dev/play_ground/src/main.rs"
+'2  83  0  ~/Downloads/twitch-search/src/main.rs
+|4,50,83,0,1610984753,"~/Downloads/twitch-search/src/main.rs"
+'3  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,51,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+'4  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,52,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+'5  22  3  ~/Desktop/dev/mos/project.yml
+|4,53,22,3,1610918842,"~/Desktop/dev/mos/project.yml"
+'6  8  0  ~/Desktop/dev/os-from-scratch
+|4,54,8,0,1610843574,"~/Desktop/dev/os-from-scratch"
+'7  8  0  ~/Desktop/dev/os-from-scratch
+|4,55,8,0,1610843226,"~/Desktop/dev/os-from-scratch"
 
 # Jumplist (newest first):
--'  1  0  ~/Templates/py3.py
-|4,39,1,0,1603623854,"~/Templates/py3.py"
--'  1  2  ~/Templates/py3.py
-|4,39,1,2,1603623832,"~/Templates/py3.py"
--'  1  0  ~/Templates/py3.py
-|4,39,1,0,1603623787,"~/Templates/py3.py"
--'  1  0  ~/Templates/py3.py
-|4,39,1,0,1603623784,"~/Templates/py3.py"
--'  1  0  ~/Templates/py3.py
-|4,39,1,0,1603623777,"~/Templates/py3.py"
--'  1  0  ~/Templates/py3.py
-|4,39,1,0,1603623766,"~/Templates/py3.py"
--'  1  0  ~/Templates/py3.py
-|4,39,1,0,1603623741,"~/Templates/py3.py"
--'  1  0  ~/Templates/py3.py
-|4,39,1,0,1603623680,"~/Templates/py3.py"
--'  1  0  ~/Templates/py3.py
-|4,39,1,0,1603623580,"~/Templates/py3.py"
--'  1  1  ~/Templates/py3.py
-|4,39,1,1,1603623275,"~/Templates/py3.py"
--'  1  0  ~/Templates/py3.py
-|4,39,1,0,1603623260,"~/Templates/py3.py"
--'  1  0  ~/Templates/py3.py
-|4,39,1,0,1603623246,"~/Templates/py3.py"
--'  1  0  ~/Templates/py3.py
-|4,39,1,0,1603623233,"~/Templates/py3.py"
--'  1  0  ~/Templates/py3.py
-|4,39,1,0,1603623229,"~/Templates/py3.py"
--'  1  0  ~/Templates/py3.py
-|4,39,1,0,1603623216,"~/Templates/py3.py"
--'  1  2  ~/Templates/py3.py
-|4,39,1,2,1603623179,"~/Templates/py3.py"
--'  2  0  ~/Templates/py3.py
-|4,39,2,0,1603623116,"~/Templates/py3.py"
--'  2  0  ~/Templates/py3.py
-|4,39,2,0,1603623116,"~/Templates/py3.py"
--'  2  0  ~/Templates/py3.py
-|4,39,2,0,1603623116,"~/Templates/py3.py"
--'  2  0  ~/Templates/py3.py
-|4,39,2,0,1603623116,"~/Templates/py3.py"
--'  2  0  ~/Templates/py3.py
-|4,39,2,0,1603623116,"~/Templates/py3.py"
--'  2  0  ~/Templates/py3.py
-|4,39,2,0,1603623116,"~/Templates/py3.py"
--'  2  0  ~/Templates/py3.py
-|4,39,2,0,1603623116,"~/Templates/py3.py"
--'  2  0  ~/Templates/py3.py
-|4,39,2,0,1603623116,"~/Templates/py3.py"
--'  2  0  ~/Templates/py3.py
-|4,39,2,0,1603623116,"~/Templates/py3.py"
--'  2  0  ~/Templates/py3.py
-|4,39,2,0,1603623116,"~/Templates/py3.py"
--'  2  0  ~/Templates/py3.py
-|4,39,2,0,1603623116,"~/Templates/py3.py"
--'  2  0  ~/Templates/py3.py
-|4,39,2,0,1603623116,"~/Templates/py3.py"
--'  2  0  ~/Templates/py3.py
-|4,39,2,0,1603623116,"~/Templates/py3.py"
--'  2  0  ~/Templates/py3.py
-|4,39,2,0,1603623116,"~/Templates/py3.py"
--'  2  0  ~/Templates/py3.py
-|4,39,2,0,1603623116,"~/Templates/py3.py"
--'  2  0  ~/Templates/py3.py
-|4,39,2,0,1603623116,"~/Templates/py3.py"
--'  2  0  ~/Templates/py3.py
-|4,39,2,0,1603623116,"~/Templates/py3.py"
--'  1  0  ~/Templates/py3.py
-|4,39,1,0,1603623114,"~/Templates/py3.py"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
--'  10  0  ~/Templates/.git/index
-|4,39,10,0,1603623097,"~/Templates/.git/index"
+-'  15  73  ~/Desktop/dev/twitchbox/t
+|4,39,15,73,1611164534,"~/Desktop/dev/twitchbox/t"
+-'  1  0  ~/Desktop/dev/twitchbox/t
+|4,39,1,0,1611164523,"~/Desktop/dev/twitchbox/t"
+-'  8  0  ~/Desktop/dev/play_ground/src/main.rs
+|4,39,8,0,1611082602,"~/Desktop/dev/play_ground/src/main.rs"
+-'  8  0  ~/Desktop/dev/play_ground/src/main.rs
+|4,39,8,0,1611082602,"~/Desktop/dev/play_ground/src/main.rs"
+-'  1  0  ~/Desktop/dev/play_ground/src/main.rs
+|4,39,1,0,1611082596,"~/Desktop/dev/play_ground/src/main.rs"
+-'  1  0  ~/Desktop/dev/play_ground/src/main.rs
+|4,39,1,0,1611082596,"~/Desktop/dev/play_ground/src/main.rs"
+-'  83  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,83,0,1610984753,"~/Downloads/twitch-search/src/main.rs"
+-'  83  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,83,0,1610984753,"~/Downloads/twitch-search/src/main.rs"
+-'  83  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,83,0,1610984753,"~/Downloads/twitch-search/src/main.rs"
+-'  83  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,83,0,1610984753,"~/Downloads/twitch-search/src/main.rs"
+-'  83  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,83,0,1610984753,"~/Downloads/twitch-search/src/main.rs"
+-'  83  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,83,0,1610984753,"~/Downloads/twitch-search/src/main.rs"
+-'  83  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,83,0,1610984753,"~/Downloads/twitch-search/src/main.rs"
+-'  83  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,83,0,1610984753,"~/Downloads/twitch-search/src/main.rs"
+-'  83  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,83,0,1610984753,"~/Downloads/twitch-search/src/main.rs"
+-'  83  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,83,0,1610984753,"~/Downloads/twitch-search/src/main.rs"
+-'  83  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,83,0,1610984753,"~/Downloads/twitch-search/src/main.rs"
+-'  83  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,83,0,1610984753,"~/Downloads/twitch-search/src/main.rs"
+-'  83  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,83,0,1610984753,"~/Downloads/twitch-search/src/main.rs"
+-'  83  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,83,0,1610984753,"~/Downloads/twitch-search/src/main.rs"
+-'  83  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,83,0,1610984753,"~/Downloads/twitch-search/src/main.rs"
+-'  83  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,83,0,1610984753,"~/Downloads/twitch-search/src/main.rs"
+-'  1  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,1,0,1610984718,"~/Downloads/twitch-search/src/main.rs"
+-'  1  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,1,0,1610984718,"~/Downloads/twitch-search/src/main.rs"
+-'  1  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,1,0,1610984718,"~/Downloads/twitch-search/src/main.rs"
+-'  1  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,1,0,1610984718,"~/Downloads/twitch-search/src/main.rs"
+-'  1  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,1,0,1610984718,"~/Downloads/twitch-search/src/main.rs"
+-'  1  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,1,0,1610984718,"~/Downloads/twitch-search/src/main.rs"
+-'  1  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,1,0,1610984718,"~/Downloads/twitch-search/src/main.rs"
+-'  1  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,1,0,1610984718,"~/Downloads/twitch-search/src/main.rs"
+-'  1  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,1,0,1610984718,"~/Downloads/twitch-search/src/main.rs"
+-'  1  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,1,0,1610984718,"~/Downloads/twitch-search/src/main.rs"
+-'  1  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,1,0,1610984718,"~/Downloads/twitch-search/src/main.rs"
+-'  1  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,1,0,1610984718,"~/Downloads/twitch-search/src/main.rs"
+-'  1  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,1,0,1610984718,"~/Downloads/twitch-search/src/main.rs"
+-'  1  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,1,0,1610984718,"~/Downloads/twitch-search/src/main.rs"
+-'  1  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,1,0,1610984718,"~/Downloads/twitch-search/src/main.rs"
+-'  1  0  ~/Downloads/twitch-search/src/main.rs
+|4,39,1,0,1610984718,"~/Downloads/twitch-search/src/main.rs"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  1  0  ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
+|4,39,1,0,1610923594,"~/.config/awesome//home/flagmate/.config/awesome/rc.lua"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
+-'  67  1  ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+|4,39,67,1,1610919494,"~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h"
 
 # History of marks within files (newest to oldest):
 
-> ~/Templates/py3.py
-	*	1603623853	0
-	"	1	0
-	^	1	0
-	.	1	0
-	+	1	0
+> ~/Desktop/dev/twitchbox/t
+	*	1611164533	0
+	"	15	73
+	^	15	74
+	.	15	73
+	+	15	73
 
-> ~/Templates/cpp.cpp
-	*	1603623095	0
-	"	1	0
-	^	5	13
-	.	6	0
-	+	5	26
-	+	6	0
-
-> ~/Templates/README.md
-	*	1603623093	0
-	"	1	0
-
-> ~/Templates/go.go
-	*	1603623003	0
-	"	3	1
-
-> ~/Templates/bash.sh
-	*	1603622955	0
-	"	1	0
-	^	1	0
-	.	1	11
-	+	1	12
-	+	1	21
-	+	1	0
-	+	1	12
-	+	1	11
-
-> ~/Templates/NERD_tree_1
-	*	1603622431	0
-	"	9	0
-	.	1	0
-	+	1	0
-
-> ~/Templates/html.html
-	*	1603622426	0
-	"	12	0
-
-> ~/.vimrc
-	*	1603621796	0
-	"	1	0
-	^	168	26
-	.	168	0
-	+	182	0
-	+	161	17
-	+	167	41
-	+	168	0
-	+	167	26
-	+	168	0
-
-> ~/Desktop/.hacking/40700.html
-	*	1603580412	0
-	"	85	36
-	^	85	37
-	.	85	37
-	+	25	43
-	+	31	10
-	+	26	39
-	+	85	37
-
-> ~/Desktop/.hacking/php-reverse-shell.php
-	*	1603579888	0
-	"	50	11
-	^	50	12
-	.	50	11
-	+	49	18
-	+	50	11
-
-> ~/Desktop/.hacking/mysql_bakup_20191129023059-1.5.1.sql
-	*	1603579558	0
-	"	78	55
-
-> ~/Desktop/.hacking/README.md
-	*	1603577220	0
-	"	24	0
-	^	24	1
-	.	24	0
-	+	6	0
-	+	2	3
-	+	6	1
-	+	5	45
-	+	6	0
-	+	5	0
-	+	2	0
-	+	3	6
-	+	8	5
-	+	9	3
-	+	11	1
-	+	10	22
-	+	9	4
-	+	13	9
-	+	23	0
-	+	15	8
-	+	16	16
-	+	18	9
-	+	15	1
-	+	19	15
-	+	20	18
-	+	17	12
-	+	24	0
-
-> ~/.tools/ethical-hacking-examples/hydra.sh
-	*	1603576357	0
-	"	4	0
-	^	4	0
-	.	4	68
-	+	4	68
-
-> ~/Desktop/dev/presetations/examples/reallife_example/media/laa.txt
-	*	1603479003	0
-	"	2	12
-
-> ~/Desktop/.hacking/Add Record Form.html
-	*	1603466706	0
-	"	17	0
-
-> home/flagmate/.local/share/sqlmap/output/results-10232020_0241pm.csv
-	*	1603464191	0
-	"	1	0
-
-> ~/Desktop/.hacking/msfinstall.txt
-	*	1603460018	0
-	"	1	31
-	^	1	32
-	.	1	31
-	+	1	31
-
-> ~/Desktop/.hacking/msfinstall
-	*	1603459802	0
-	"	1	31
-	^	1	32
-	.	1	31
-	+	1	31
-
-> ~/Desktop/dev/presetations/examples/reallife_example/media/secrect.txt
-	*	1603372781	0
-	"	2	31
-	^	2	32
-	.	2	31
-	+	2	31
-
-> ~/Desktop/dev/presetations/examples/myfavouritenumber
-	*	1603230484	0
-	"	1	0
-	^	1	10
-	.	1	0
-	+	1	0
-
-> ~/.config/awesome/autolaunch.lua
-	*	1603202994	0
-	"	31	0
-	^	30	2
-	.	31	0
-	+	30	0
-	+	31	0
-
-> ~/aliasrc
-	*	1602954842	0
-	"	1	0
-
-> /etc/locale.gen
-	*	1602931911	0
-	"	53	0
-
-> /etc/locale.conf
-	*	1602931899	0
-	"	1	0
-
-> ~/Desktop/dev/readme/secrect.txt
-	*	1602882627	0
-	"	1	0
-
-> ~/.bitcoin/wallets/wallet.dat
-	*	1602875205	0
-	"	1	594
-
-> ~/.zshrc
-	*	1602872184	0
-	"	10	12
-	^	10	13
-	.	10	13
-	+	93	25
-	+	10	13
-
-> ~/Templates/c.c
-	*	1602772435	0
-	"	3	1
-	^	3	2
-	.	3	1
-	+	5	0
-	+	2	0
-	+	3	1
-
-> ~/Desktop/dev/text_editor/src/main.c
-	*	1602769233	0
-	"	4	0
-	^	4	0
-	.	5	0
-	+	5	9
-	+	5	0
-	+	4	0
-	+	2	22
-	+	2	19
-	+	3	0
-	+	5	0
-	+	4	0
-	+	5	0
-
-> ~/Desktop/dev/text_editor/NERD_tree_1
-	*	1602769058	0
-	"	7	0
-	.	1	0
-	+	1	0
-
-> ~/.tools/saycheese/saycheese.sh
-	*	1602709749	0
-	"	86	0
-
-> ~/.tools/saycheese/NERD_tree_1
-	*	1602709733	0
-	"	14	0
-	.	1	0
-	+	1	0
-
-> ~/.tools/saycheese/LICENSE
-	*	1602709725	0
-	"	22	14
-
-> ~/.tools/saycheese/post.php
-	*	1602709722	0
-	"	16	0
-
-> ~/.tools/Phisher-man/phisherman.py
-	*	1602706119	0
-	"	133	49
-
-> ~/.tools/Phisher-man/NERD_tree_2
-	*	1602706102	0
-	"	9	0
-	.	1	0
-	+	1	0
-
-> ~/.tools/Phisher-man/ngrok
-	*	1602706100	0
-	"	20	0
-
-> ~/.tools/Phisher-man/NERD_tree_1
-	*	1602706095	0
+> ~/Desktop/dev/play_ground/src/main.rs
+	*	1611082601	0
 	"	8	0
-	.	1	0
-	+	1	0
 
-> /run/media/flagmate/1708-E87F/presetations/cracking/3.prog_example/example.c
-	*	1602699673	0
-	"	3	0
-
-> /run/media/flagmate/1708-E87F/presetations/cracking/3.prog_example/control_flow.c
-	*	1602699670	0
-	"	32	0
-
-> /run/media/flagmate/A1E4-BA85/liveoverflow_youtube/3modern_stack0/stack0.c
-	*	1602620081	0
-	"	20	0
-
-> /run/media/flagmate/A1E4-BA85/liveoverflow_youtube/3modern_stack0/brute_cookie.c
-	*	1602620075	0
-	"	131	0
-
-> /run/media/flagmate/A1E4-BA85/liveoverflow_youtube/0x10/example.c
-	*	1602620047	0
-	"	7	0
-
-> ~/.config/awesome/rc.lua
-	*	1602612459	0
-	"	217	33
-	^	87	34
-	.	87	36
-	+	76	33
-	+	77	0
-	+	70	72
-	+	77	0
-	+	78	0
-	+	86	47
-	+	87	36
+> ~/Downloads/twitch-search/src/main.rs
+	*	1610984747	0
+	"	83	0
 
 > ~/.config/awesome//home/flagmate/.config/awesome/rc.lua
-	*	1602612256	0
+	*	1610923591	0
 	"	1	0
 
-> ~/.tools/README.md
-	*	1602604137	0
-	"	3	30
-	^	3	31
-	.	3	30
-	+	3	30
+> ~/Desktop/dev/os-from-scratch/src/lib/libc/stdio.h
+	*	1610919493	0
+	"	67	1
 
-> ~/Desktop/.hacking/THM/image.jpg
-	*	1602603092	0
-	"	6	98
-
-> ~/Desktop/.hacking/THM/php-reverse-shell.php
-	*	1602602058	0
-	"	50	11
-	^	50	12
-	.	50	11
-	+	49	18
-	+	50	11
-
-> ~/Desktop/.hacking/THM/NERD_tree_1
-	*	1602602002	0
-	"	6	0
-	.	1	0
-	+	1	0
-
-> /usr/share/X11/xorg.conf.d/50-synaptics.conft
-	*	1602593950	0
-	"	3	0
-	^	3	0
-	.	3	0
-	+	1	0
-	+	2	32
-	+	3	0
-
-> ~/.config/awesome/wiboxs.lua
-	*	1602593720	0
-	"	4	0
-	^	4	0
-	.	5	0
-	+	3	82
-	+	3	80
-	+	114	0
-	+	116	26
-	+	116	71
-	+	118	0
-	+	116	71
-	+	119	4
-	+	119	0
-	+	121	0
-	+	3	33
-	+	116	81
-	+	118	0
-	+	117	0
-	+	116	26
-	+	117	0
-	+	3	33
-	+	4	0
-	+	5	0
-
-> ~/.config/awesome/NERD_tree_1
-	*	1602593347	0
-	"	15	0
-	.	1	0
-	+	1	0
-
-> ~/.config/awesome/mouse.lua
-	*	1602593248	0
-	"	1	14
-	^	89	15
-	.	89	14
-	+	89	14
-
-> ~/.config/awesome/rules.lua
-	*	1602593082	0
-	"	82	0
-	^	82	0
-	.	83	0
-	+	83	20
-	+	83	9
-	+	82	6
-	+	83	0
-	+	82	0
-	+	83	0
-
-> ~/.config/awesome/undotree_2
-	*	1602592992	0
-	"	11	1
-	.	3	0
-	+	3	0
-
-> ~/.config/awesome/diffpanel_3
-	*	1602592986	0
-	"	1	0
-	.	2	0
-	+	2	0
-
-> ~/Desktop/dev/README.md
-	*	1602579874	0
-	"	54	5
-	^	54	6
-	.	54	5
-	+	58	14
-	+	58	0
-	+	54	5
-
-> ~/Desktop/dev/Untitled Folder/README.md
-	*	1602538572	0
-	"	2	0
-	^	2	0
-	.	1	22
-	+	1	22
-
-> ~/.config/awesome/theme.lua
-	*	1602535660	0
-	"	32	30
-	^	32	31
-	.	32	29
-	+	32	29
-
-> ~/.config/polybar/config.ini
-	*	1602535641	0
-	"	4	11
-	^	3	12
-	.	3	11
-	+	71	30
-	+	3	11
-
-> ~/.config/polybar/NERD_tree_1
-	*	1602535158	0
-	"	6	0
-	.	1	0
-	+	1	0
+> ~/Desktop/dev/mos/project.yml
+	*	1610918839	0
+	"	22	3

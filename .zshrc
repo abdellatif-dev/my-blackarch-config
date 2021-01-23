@@ -9,11 +9,6 @@ source $HOME/.zsh/oh-my-zsh/oh-my-zsh.sh
 
 export EDITOR="nvim"
 
-# ZSH history file
-HISTSIZE=100
-SAVEHIST=100
-HISTFILE=~/.zsh_history
-
 # Fancy auto-complete (with vi movement)
 autoload -Uz compinit
 zstyle ':completion:*' menu select=0
@@ -69,12 +64,9 @@ bindkey "^[[3~" delete-char
 bindkey '^[[H' beginning-of-line
 bindkey '^[[F' end-of-line
 
-PATH=$PATH:/home/flagmate/.tools/010editor;export PATH;
 PATH=$PATH:/home/flagmate/scripts/;export PATH;
-PATH=$PATH:/home/flagmate/.tools/myscripts;export PATH;
-fpath+=~/.zfunc
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+#source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 source $HOME/aliasrc
 #eval "$(starship init zsh)"
 
@@ -111,6 +103,6 @@ ex ()
   fi
 }
 
-PROMPT="%F{10}[%B%F{7}%n%f%b%F{5}@%f%B%F{7}%m%f%b%F{10}]%f-%F{10}[%f%B%F{7}%t %f%b%F{10}]%f-%F{10}[%f%F{3}%B%1~%b%f%F{10}]%f
-%F{10}[%B%F{7}%h%f%b%F{10}|%B%F{7}%?%f%b%F{10}]%f-%F{3}%B$%b%f: "
+PROMPT='%F{10}[%B%F{7}%n%f%b%F{5}@%f%B%F{7}%m%f%b%F{10}]%f-%F{10}[%f%B%F{7}%t %f%b%F{10}]%f-%F{10}[%f%F{3}%B%1~%b%f%F{10}]%f
+%F{10}[%B%F{7}%h%f%b%F{10}|%B%F{7}%?%f%b%F{10}]%f-%F{3}%B$%b%f: '
 

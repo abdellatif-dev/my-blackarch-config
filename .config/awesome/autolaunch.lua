@@ -4,4 +4,5 @@ local awful = require("awful")
 awful.spawn.with_shell("/home/flagmate/.config/polybar/launch.sh")
 
 awful.spawn.with_shell("/home/flagmate/.config/awesome/scripts/keyboardxmodmap.sh")
-awful.spawn.with_shell("/home/flagmate/.config/awesome/scripts/picom.sh")
+-- awful.spawn.with_shell("/home/flagmate/.config/awesome/scripts/picom.sh")
+

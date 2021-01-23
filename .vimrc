@@ -17,7 +17,6 @@ Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
-Plugin 'ryanoasis/vim-devicons'
 Plugin 'RRethy/vim-illuminate'
 
 Plugin 'junegunn/fzf', {'dir': '~/.fzf','do': './install --all'}
