@@ -18,15 +18,13 @@ printf "\n"
 
 echo "welcome $USER"
 sleep 2
-echo "blackarch config preparing installation"
-sleep 1
-
+echo "arch config preparing installation"
 printf "\n"
 
 updateconf="--noconfirm"
 installconfirm="--needed --noconfirm"
 extra="rofi lxappearance keyscreen breeze breeze-icons thunar xarchiver bat"
-aurstuff="polybar dmenu-abdellatif brave-bin diff-so-fancy picom-jonaburg-git"
+aurstuff="polybar st-abdellatif-git dmenu-abdellatif brave-bin diff-so-fancy picom-jonaburg-git"
 printf "Update packages[Y/n]: "
 read -r confirm
 case $confirm in
@@ -112,10 +110,8 @@ sleep 1
 printf "install extra  [Y/n]: "
 read -r stconfirm
 case $stconfirm in
-   "y") echo "installing extra " && sudo pacman -S $extra $noconfirm\
-        && yay -S brave-bin $noconfirm;;
-   "Y") echo "installing extra " && sudo pacman -S $extra $noconfirm\
-        && yay -S brave-bin $noconfirm;;
+   "y") echo "installing extra " && sudo pacman -S $extra $noconfirm;;
+   "Y") echo "installing extra " && sudo pacman -S $extra $noconfirm;;
      *) echo "skipping";;
 esac
 
@@ -125,10 +121,8 @@ sleep 1
 printf "obs-studio or simplescreenrecorder"
 read -r stconfirm
 case $stconfirm in
-   "simplescreenrecorder") echo "installing extra " && sudo pacman -S simplescreenrecorder $noconfirm\
-        && yay -S brave-bin $noconfirm;;
-   "obs-studio") echo "installing extra " && sudo pacman -S obs-studio $noconfirm\
-        && yay -S brave-bin $noconfirm;;
+   "simplescreenrecorder") echo "installing extra " && sudo pacman -S simplescreenrecorder $noconfirm;;
+   "obs-studio") echo "installing extra " && sudo pacman -S obs-studio $noconfirm;;
      *) echo "skipping";;
 esac
 printf "\n"
