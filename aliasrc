@@ -17,8 +17,6 @@ alias sd='doas'
 alias rmdir='rm -rvdf'
 alias rm='rm -f'
 alias mutt='neomutt'
-alias twitchevents='surf https://streamlabs.com/widgets/event-list/v1/AC97977ADD29F347F511'
-alias twitchviewrs='surf https://streamlabs.com/widgets/viewer-count\?token\=AC97977ADD29F347F511'
 alias python="python2"
 alias shred="shred -zf"
 alias config='nvim ~/.zshrc' # Quick access to the ~/.zshrc file
@@ -34,7 +32,6 @@ alias rm='rm -iv'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias vi='nvim ./'
-alias twitchchat='twitchChatCLI-linux-amd64 abdellatifdev'
 alias vim='nvim'
 # alias to auto cd
 alias hacking='cd ~/Desktop/.hacking/'
