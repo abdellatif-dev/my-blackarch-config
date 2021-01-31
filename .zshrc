@@ -1,7 +1,5 @@
-# Themes are into ~/.zsh/oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each time
-#ZSH_THEME="spaceship"
-
+# Flex on the ubuntu users and systemd users
+screenfetch
 # Plugin list in ~/.zsh/oh-my-zsh/plugins
 plugins=(git git-prompt archlinux nmap systemd)
 
@@ -66,9 +64,8 @@ bindkey '^[[F' end-of-line
 
 PATH=$PATH:/home/flagmate/scripts/;export PATH;
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-#source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 source $HOME/aliasrc
-#eval "$(starship init zsh)"
 
 
 autoload -U colors && colors
@@ -103,6 +100,7 @@ ex ()
   fi
 }
 
-PROMPT='%F{10}[%B%F{7}%n%f%b%F{5}@%f%B%F{7}%m%f%b%F{10}]%f-%F{10}[%f%B%F{7}%t %f%b%F{10}]%f-%F{10}[%f%F{3}%B%1~%b%f%F{10}]%f
-%F{10}[%B%F{7}%h%f%b%F{10}|%B%F{7}%?%f%b%F{10}]%f-%F{3}%B$%b%f: '
+#PROMPT='%F{10}[%B%F{7}%n%f%b%F{5}@%f%B%F{7}%m%f%b%F{10}]%f-%F{10}[%f%B%F{7}%t %f%b%F{10}]%f-%F{10}[%f%F{3}%B%1~%b%f%F{10}]%f
+#%F{10}[%B%F{7}%h%f%b%F{10}|%B%F{7}%?%f%b%F{10}]%f-%F{3}%B$%b%f: '
 
+eval "$(starship init zsh)"
